@@ -2,1408 +2,1044 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light only" />
-  <title>Alex A — Graphic Designer</title>
-  <meta name="description" content="Premium minimal design portfolio — works, services, pricing, reviews, FAQ, contact." />
-
-  <!-- Open Graph (optional: set og:url and og:image later) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Alex A (Александр Алтухов) — Short-form Video Editor (TikTok/Reels/Shorts), YouTube, Stream Clips. Captions, hooks, pacing, AI workflow." />
+  <meta property="og:title" content="Alex A — Video Editor (Shorts / Reels / TikTok)" />
+  <meta property="og:description" content="Short-form video editor. Hooks, captions, pacing. TikTok/Reels/Shorts, YouTube, stream highlights." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Alex A — Graphic Designer" />
-  <meta property="og:description" content="A premium minimal portfolio for graphic design." />
-  <!-- <meta property="og:image" content="assets/og.jpg" /> -->
-  <!-- <meta property="og:url" content="https://your-domain.com" /> -->
-
+  <meta name="theme-color" content="#0b0d10" />
+  <title>Alex A — Video Editor Portfolio</title>
   <style>
     :root{
-      --bg:#f7f5f1; --bg2:#f2f0eb;
-      --paper:rgba(255,255,255,.72);
-      --paper2:rgba(255,255,255,.88);
-      --ink:#121318;
-      --muted:rgba(18,19,24,.68);
-      --line:rgba(18,19,24,.10);
-      --line2:rgba(18,19,24,.16);
-      --accent:#d6d2c8; --accent2:#ece8df; --accentInk:#2a2b31;
-      --shadow:0 20px 55px rgba(18,19,24,.10);
-      --shadow2:0 12px 30px rgba(18,19,24,.08);
-      --r:18px; --r2:26px; --max:1180px;
-      --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Noto Sans","Helvetica Neue",sans-serif;
-      --serif:ui-serif,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",Times,serif;
-      --focus:rgba(18,19,24,.25);
+      --bg:#0b0d10;
+      --text:#eef2f6;
+      --muted:#a7b0bb;
+      --line:rgba(255,255,255,.10);
+      --accent:#e9ecef;
+      --chip:rgba(255,255,255,.06);
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:26px;
+      --max:1120px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family:var(--sans);
-      color:var(--ink);
-      background:
-        radial-gradient(900px 650px at 20% -10%, rgba(214,210,200,.55), transparent 55%),
-        radial-gradient(900px 650px at 84% 0%, rgba(214,210,200,.36), transparent 55%),
-        radial-gradient(900px 700px at 55% 110%, rgba(214,210,200,.30), transparent 60%),
-        linear-gradient(180deg,var(--bg),var(--bg2));
-      overflow-x:hidden;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(255,255,255,.08), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(255,255,255,.05), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
     }
-    a{color:inherit;text-decoration:none}
-    button,input,textarea,select{font:inherit}
-    ::selection{background:rgba(214,210,200,.55)}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
 
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-    .section{padding:84px 0}
-    .section.compact{padding:64px 0}
-    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
-    body.lang-en [data-lang="ru"]{display:none!important}
-    body.lang-ru [data-lang="en"]{display:none!important}
-
-    .glass{
-      background:var(--paper);
-      border:1px solid var(--line);
-      border-radius:var(--r2);
-      box-shadow:var(--shadow2);
-      backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
-    }
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 14px;border-radius:16px;border:1px solid var(--line);
-      background:rgba(255,255,255,.70);
-      font-weight:900;letter-spacing:.14px;text-transform:uppercase;font-size:12px;
-      cursor:pointer;user-select:none;
-      transition:transform .08s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
-    }
-    .btn:hover{background:rgba(255,255,255,.95);border-color:var(--line2);box-shadow:0 10px 20px rgba(18,19,24,.06)}
-    .btn:active{transform:translateY(1px)}
-    .btn.primary{
-      background:linear-gradient(135deg,rgba(214,210,200,.70),rgba(255,255,255,.82));
-      border-color:rgba(214,210,200,.80);
-    }
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:9px 12px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.62);color:var(--muted);
-      font-weight:850;font-size:12px;letter-spacing:.14px;cursor:pointer;user-select:none;
-      transition:background .12s ease,border-color .12s ease,transform .08s ease,color .12s ease;
-    }
-    .chip:hover{background:rgba(255,255,255,.92);border-color:var(--line2);color:var(--ink)}
-    .chip:active{transform:translateY(1px)}
-    .chip.active{
-      background:linear-gradient(135deg,rgba(214,210,200,.62),rgba(255,255,255,.80));
-      border-color:rgba(214,210,200,.70);color:var(--accentInk);
-    }
-    .btn:focus-visible,.chip:focus-visible,.nav a:focus-visible,.iconbtn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
-      outline:3px solid var(--focus);outline-offset:2px;
-    }
-
-    /* Topbar */
     .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(247,245,241,.72);
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,13,16,.65);
       border-bottom:1px solid var(--line);
-      backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
     }
-    .trow{height:74px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-    .brand{display:flex;flex-direction:column;gap:5px;min-width:240px}
-    .brand b{font-weight:950;letter-spacing:.14px;font-size:14px;display:flex;align-items:center;gap:10px}
-    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,rgba(214,210,200,1),rgba(255,255,255,1));
-      box-shadow:0 0 0 6px rgba(214,210,200,.20);border:1px solid rgba(18,19,24,.08)}
-    .brand span{color:var(--muted);font-size:12px;font-weight:800;line-height:1.2}
-    .nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
-    .nav a{
-      padding:10px 11px;border-radius:999px;border:1px solid transparent;color:var(--muted);
-      font-weight:900;letter-spacing:.14px;text-transform:uppercase;font-size:12px;white-space:nowrap;
-      transition:background .12s ease,border-color .12s ease,color .12s ease;
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; min-width:220px}
+    .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 6px rgba(233,236,239,.12)}
+    .brand-title{font-weight:700; letter-spacing:.3px}
+    .brand-sub{color:var(--muted); font-size:12px}
+
+    .nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:center}
+    .nav a{color:var(--muted); font-size:13px; padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .nav a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03)}
+
+    .actions{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:220px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:600;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .08s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
     }
-    .nav a:hover{background:rgba(255,255,255,.60);border-color:var(--line);color:var(--ink)}
-    .nav a.active{background:rgba(214,210,200,.35);border-color:rgba(214,210,200,.55);color:var(--accentInk)}
-    .actions{display:flex;align-items:center;gap:10px}
-    .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.60)}
-    .lang button{border:0;background:transparent;cursor:pointer;padding:10px 12px;font-weight:950;color:var(--muted);font-size:12px;letter-spacing:.14px}
-    .lang button.active{background:rgba(18,19,24,.05);color:var(--ink)}
-    .iconbtn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.70);cursor:pointer}
-    .burger{display:none}
-    .burger i{width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;display:block}
-    .burger i:before,.burger i:after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px}
-    .burger i:before{top:-6px}.burger i:after{top:6px}
-    @media(max-width:1040px){.nav{display:none}.burger{display:inline-flex}.brand{min-width:auto}}
+    .btn:hover{background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.16)}
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{background:rgba(233,236,239,.12); border-color:rgba(233,236,239,.24)}
+    .btn.primary:hover{background:rgba(233,236,239,.16)}
 
-    /* Drawer */
-    .drawer-backdrop{position:fixed;inset:0;z-index:60;background:rgba(18,19,24,.25);opacity:0;pointer-events:none;transition:opacity .18s ease}
-    .drawer{position:fixed;top:0;right:0;height:100%;width:min(390px,92vw);z-index:70;transform:translateX(110%);
-      transition:transform .22s ease;background:rgba(255,255,255,.78);border-left:1px solid var(--line);
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow);display:flex;flex-direction:column}
-    body.drawer-open .drawer-backdrop{opacity:1;pointer-events:auto}
-    body.drawer-open .drawer{transform:translateX(0)}
-    .dhead{padding:16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .dhead b{font-weight:950;letter-spacing:.14px}
-    .dlinks{padding:10px;display:flex;flex-direction:column;gap:6px}
-    .dlinks a{padding:12px;border-radius:14px;border:1px solid transparent;color:var(--muted);font-weight:950;letter-spacing:.12px;text-transform:uppercase;font-size:12px}
-    .dlinks a:hover{background:rgba(18,19,24,.04);border-color:var(--line);color:var(--ink)}
-    .dfoot{margin-top:auto;padding:14px 16px;border-top:1px solid var(--line);display:flex;gap:10px;flex-wrap:wrap}
-
-    /* Hero */
-    .hero{padding:86px 0 48px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:stretch}
-    @media(max-width:1040px){.hero-grid{grid-template-columns:1fr}}
-    .hero-main{padding:26px 22px 24px;position:relative;overflow:hidden}
-    .hero-main:before{
-      content:"";position:absolute;inset:-2px;
-      background:
-        radial-gradient(520px 360px at 24% 18%, rgba(255,255,255,.65), transparent 60%),
-        radial-gradient(520px 360px at 82% 64%, rgba(214,210,200,.55), transparent 64%),
-        linear-gradient(180deg, rgba(214,210,200,.18), transparent 55%);
-      pointer-events:none;opacity:.95;
+    .lang{
+      display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden;
+      background:rgba(255,255,255,.02)
     }
-    .hero-kicker{position:relative;display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:12px}
-    h1{position:relative;margin:14px 0 10px;font-family:var(--serif);font-weight:950;letter-spacing:-.7px;font-size:50px;line-height:1.02}
-    @media(max-width:560px){h1{font-size:40px}}
-    .tagline{position:relative;margin:0;color:var(--muted);font-weight:820;line-height:1.65;font-size:14px;max-width:70ch}
-    .hero-cta{position:relative;margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-    .hero-side{padding:18px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
-    .hero-side:before{
-      content:"";position:absolute;inset:-2px;
-      background:
-        radial-gradient(600px 420px at 30% 12%, rgba(255,255,255,.70), transparent 58%),
-        radial-gradient(600px 420px at 84% 78%, rgba(214,210,200,.58), transparent 62%);
-      opacity:.85;pointer-events:none;
+    .lang button{
+      border:0; background:transparent; color:var(--muted); cursor:pointer;
+      padding:8px 10px; font-size:12px; font-weight:700; letter-spacing:.4px
     }
-    .kpi-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    @media(max-width:560px){.kpi-grid{grid-template-columns:1fr}}
-    .kpi{border:1px solid var(--line);background:rgba(255,255,255,.62);border-radius:16px;padding:12px}
-    .kpi b{display:block;font-weight:950;font-size:14px;letter-spacing:-.2px}
-    .kpi span{display:block;margin-top:6px;color:var(--muted);font-weight:800;font-size:12px;line-height:1.35}
-    .micro{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px;margin-top:4px;color:var(--muted);font-weight:850;font-size:12px}
-    .micro .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.60)}
+    .lang button.active{color:var(--text); background:rgba(255,255,255,.06)}
 
-    /* Section headings */
-    .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px}
-    .sec-head .left{max-width:78ch}
-    .sec-head h2{margin:0;font-family:var(--serif);font-weight:950;letter-spacing:-.45px;font-size:32px;line-height:1.1}
-    .sec-head p{margin:8px 0 0;color:var(--muted);font-weight:820;line-height:1.65;font-size:13.5px}
+    section{padding:54px 0}
+    .hero{padding:64px 0 40px}
+    .grid-hero{display:grid; grid-template-columns: 1.35fr .65fr; gap:22px; align-items:stretch}
+    @media (max-width: 980px){.grid-hero{grid-template-columns:1fr}}
 
-    /* Cards */
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:1040px){.grid2,.grid3{grid-template-columns:1fr}}
-    .card{padding:18px}
-    .card h3{margin:0;font-family:var(--serif);font-weight:950;letter-spacing:-.28px;font-size:20px;line-height:1.1}
-    .card p{margin:10px 0 0;color:var(--muted);font-weight:820;line-height:1.65;font-size:13.5px}
-    .list{margin-top:12px;display:grid;gap:10px}
-    .li{border:1px solid var(--line);background:rgba(255,255,255,.62);border-radius:16px;padding:12px;color:var(--muted);font-weight:850;font-size:13px;line-height:1.55}
-
-    /* Signature */
-    .sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:1040px){.sig-grid{grid-template-columns:1fr}}
-    .sig-card{
-      overflow:hidden;border-radius:var(--r2);border:1px solid rgba(214,210,200,.70);
-      background:linear-gradient(135deg,rgba(214,210,200,.50),rgba(255,255,255,.78));
-      box-shadow:var(--shadow2);cursor:pointer;position:relative;
-      transition:transform .12s ease, box-shadow .12s ease;
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
     }
-    .sig-card:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(18,19,24,.10)}
-    .sig-top{padding:12px 12px 0;display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:11px}
-    .sig-badge{padding:7px 10px;border-radius:999px;border:1px solid rgba(18,19,24,.12);background:rgba(255,255,255,.60);color:var(--accentInk)}
-    .sig-media{margin:12px;border-radius:20px;overflow:hidden;border:1px solid rgba(18,19,24,.10);background:rgba(255,255,255,.60);aspect-ratio:16/10;position:relative}
-    .sig-media img{width:100%;height:100%;object-fit:cover;display:block}
-    .sig-media:after{content:"";position:absolute;inset:0;background:radial-gradient(520px 260px at 55% 22%, rgba(255,255,255,.55), transparent 58%);pointer-events:none;opacity:.9}
-    .sig-meta{padding:0 16px 16px}
-    .sig-meta b{display:block;font-weight:950;letter-spacing:.10px;font-size:14px}
-    .sig-meta span{display:block;margin-top:6px;color:var(--muted);font-weight:820;font-size:12.8px;line-height:1.5}
-    .sig-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-    .tag{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.62);color:var(--muted);font-weight:900;font-size:11px;letter-spacing:.14px}
+    .card-inner{padding:26px}
 
-    /* Works controls */
-    .controls{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
-    .filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .search-sort{display:flex;gap:10px;align-items:center;flex-wrap:wrap;width:min(620px,100%);justify-content:flex-end}
-    .field{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.70);border-radius:999px;padding:10px 12px;flex:1;min-width:240px}
-    .field input{width:100%;border:0;outline:none;background:transparent;color:var(--ink);font-weight:850;font-size:12.5px}
-    .field input::placeholder{color:rgba(18,19,24,.45)}
-    select{border:1px solid var(--line);background:rgba(255,255,255,.70);color:var(--ink);border-radius:999px;padding:10px 12px;font-weight:950;font-size:12px;outline:none;cursor:pointer;min-width:180px}
+    h1{margin:0 0 10px; font-size:42px; line-height:1.08; letter-spacing:-.6px}
+    @media (max-width: 520px){h1{font-size:34px}}
+    .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
 
-    /* Masonry */
-    .masonry{columns:3 320px;column-gap:14px}
-    @media(max-width:1040px){.masonry{columns:2 300px}}
-    @media(max-width:600px){.masonry{columns:1 300px}}
-    .work{
-      break-inside:avoid;margin:0 0 14px;border:1px solid var(--line);border-radius:var(--r2);
-      background:rgba(255,255,255,.72);box-shadow:var(--shadow2);overflow:hidden;cursor:pointer;position:relative;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .work:hover{transform:translateY(-2px);border-color:rgba(214,210,200,.85);background:rgba(255,255,255,.92)}
-    .work.premium{border-color:rgba(214,210,200,.90);background:linear-gradient(135deg,rgba(214,210,200,.42),rgba(255,255,255,.86))}
-    .wbadge{
-      position:absolute;top:12px;left:12px;z-index:2;
-      padding:7px 10px;border-radius:999px;border:1px solid rgba(18,19,24,.12);
-      background:rgba(255,255,255,.62);color:var(--accentInk);
-      font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:11px;
-      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-    }
-    .thumb{width:100%;position:relative;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(214,210,200,.55),rgba(255,255,255,.75))}
-    .thumb img{width:100%;height:auto;display:block;object-fit:cover;filter:saturate(.98) contrast(1.02)}
-    .thumb:after{content:"";position:absolute;inset:0;background:radial-gradient(520px 260px at 62% 18%, rgba(255,255,255,.55), transparent 60%);opacity:.85;pointer-events:none}
-    .meta{padding:12px 12px 14px}
-    .title{font-weight:950;letter-spacing:.10px;font-size:13.5px;line-height:1.2}
-    .sub{margin-top:7px;color:var(--muted);font-weight:820;font-size:12.7px;line-height:1.5;min-height:34px}
-    .tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0}
+    .chip{border:1px solid var(--line); background:var(--chip); color:var(--text); border-radius:999px; padding:8px 10px; font-size:12px}
+    .chip b{font-weight:800}
 
-    /* Pricing highlight */
-    .price{position:relative;overflow:hidden}
-    .price:before{
-      content:"";position:absolute;inset:-2px;
-      background:
-        radial-gradient(500px 360px at 20% 18%, rgba(255,255,255,.62), transparent 60%),
-        radial-gradient(520px 420px at 88% 80%, rgba(214,210,200,.50), transparent 62%);
-      opacity:.8;pointer-events:none;
+    .stats{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px}
+    .stat{border:1px solid var(--line); background:rgba(255,255,255,.03); border-radius:14px; padding:12px 12px}
+    .stat .k{color:var(--muted); font-size:12px}
+    .stat .v{font-weight:800; margin-top:2px}
+
+    .aside{display:flex; flex-direction:column; gap:12px}
+    .panel{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:var(--radius2);
+      padding:16px;
     }
-    .price .inner{position:relative}
-    .price .amt{
-      margin-top:12px;display:inline-flex;padding:9px 10px;border-radius:999px;
-      border:1px solid rgba(214,210,200,.80);background:rgba(214,210,200,.35);
-      font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:12px;color:var(--accentInk);
+    .panel h3{margin:0 0 6px; font-size:13px; letter-spacing:.3px; text-transform:uppercase; color:var(--muted)}
+    .panel p{margin:0; color:var(--text); font-size:14px}
+
+    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:18px}
+    .section-title h2{margin:0; font-size:20px; letter-spacing:.2px}
+    .section-title .hint{color:var(--muted); font-size:13px}
+
+    .video{
+      position:relative; border-radius:var(--radius2);
+      overflow:hidden; border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      aspect-ratio: 16 / 9;
+    }
+    .video video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
+    .video .overlay{
+      position:absolute; inset:auto 14px 14px 14px;
+      display:flex; justify-content:space-between; align-items:flex-end; gap:10px;
+      pointer-events:none;
+    }
+    .overlay .badge{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+      color:var(--text);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:12px;
+      font-weight:800;
     }
 
-    /* Clients logos */
-    .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-    @media(max-width:1040px){.logos{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:560px){.logos{grid-template-columns:repeat(2,1fr)}}
-    .logo{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 12px;border-radius:18px;border:1px solid var(--line);
-      background:rgba(255,255,255,.62);color:rgba(18,19,24,.55);font-weight:950;letter-spacing:.12px;user-select:none}
-    .logo svg{width:20px;height:20px;opacity:.75}
+    .works-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .works-filters{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 16px}
+    .works-filters .wfilter{cursor:pointer}
+    .works-filters .wfilter.active{border-color:var(--accent); background:rgba(255,255,255,.08)}
+    .work .desc{margin-top:10px; font-size:12px; color:var(--muted); line-height:1.4}
+    @media (max-width: 980px){.works-grid{grid-template-columns:repeat(2, 1fr)}}
+    @media (max-width: 560px){.works-grid{grid-template-columns:1fr}}
+    .work{border-radius:var(--radius); border:1px solid var(--line); background:rgba(255,255,255,.03); overflow:hidden}
+    .work .thumb{aspect-ratio:16/9; background:rgba(255,255,255,.02); overflow:hidden}
+    .work .thumb video{width:100%; height:100%; object-fit:cover; display:block}
+    .work .meta{padding:12px}
+    .work .title{font-weight:800; font-size:14px}
+    .work .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:11px; color:var(--muted); border:1px solid var(--line); background:rgba(255,255,255,.02); border-radius:999px; padding:6px 8px}
 
-    /* Contact */
-    .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
-    @media(max-width:1040px){.contact{grid-template-columns:1fr}}
-    .contact-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .email-wrap{position:relative;display:inline-flex;align-items:center;gap:10px}
-    .email-panel{
-      position:absolute;left:calc(100% + 10px);top:50%;
-      transform:translateY(-50%) translateX(-8px);
-      opacity:0;pointer-events:none;transition:opacity .14s ease, transform .14s ease;
-      min-width:290px;padding:10px;border-radius:16px;border:1px solid var(--line);
-      background:rgba(255,255,255,.86);box-shadow:var(--shadow2);
-      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    .cards3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media (max-width: 980px){.cards3{grid-template-columns:1fr}}
+    .svc{padding:18px; border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .svc h3{margin:0 0 6px; font-size:16px}
+    .svc p{margin:0; color:var(--muted)}
+
+    .tabs{display:flex; gap:8px; align-items:center}
+    .tab{padding:8px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--muted); cursor:pointer; font-weight:800; font-size:12px}
+    .tab.active{color:var(--text); background:rgba(255,255,255,.06)}
+    .pricing{display:grid; grid-template-columns: 1.1fr .9fr; gap:14px}
+    @media (max-width: 980px){.pricing{grid-template-columns:1fr}}
+    .pricebox{padding:20px; border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .pricebox .big{font-size:26px; font-weight:900; letter-spacing:-.4px}
+    .pricebox .sub{color:var(--muted); margin-top:6px}
+    .pricebox .note{margin-top:14px; border-top:1px solid var(--line); padding-top:12px; color:var(--muted); font-size:13px}
+
+    .ba{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media (max-width: 980px){.ba{grid-template-columns:1fr}}
+    .ba-item{border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03); padding:14px}
+    .ba-item .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 520px){.ba-item .row{grid-template-columns:1fr}}
+    .mini{
+      border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02);
+      aspect-ratio: 16/9; display:flex; align-items:center; justify-content:center;
+      color:var(--muted); font-size:12px; text-align:center; padding:10px;
     }
-    .email-wrap.open .email-panel{opacity:1;pointer-events:auto;transform:translateY(-50%) translateX(0)}
-    .email-text{font-weight:950;letter-spacing:.10px;font-size:12.8px;color:var(--ink);user-select:text;white-space:nowrap}
-    .copybtn{
-      padding:10px 12px;border-radius:14px;border:1px solid var(--line);
-      background:rgba(255,255,255,.70);cursor:pointer;font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:11px;
+
+    .tiles{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px}
+    @media (max-width: 980px){.tiles{grid-template-columns:repeat(2, 1fr)}}
+    .tile{border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03); padding:14px}
+    .tile .k{color:var(--muted); font-size:12px}
+    .tile .v{font-weight:900; margin-top:8px; font-size:14px}
+    .tile .ph{margin-top:10px; color:var(--muted); font-size:12px; border-top:1px dashed rgba(255,255,255,.18); padding-top:10px}
+
+    .reviews{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+    @media (max-width: 980px){.reviews{grid-template-columns:1fr}}
+    .review{border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03); padding:14px}
+    .review .img{border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:12px; text-align:center; padding:12px}
+
+    footer{padding:34px 0 50px; border-top:1px solid var(--line); color:var(--muted)}
+    [data-lang]{display:none}
+    body.lang-en [data-lang="en"], body.lang-ru [data-lang="ru"]{display:block}
+    [id]{scroll-margin-top:80px}
+    .row-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+  
+    /* ---------- Global polish ---------- */
+    section{border-top:1px solid rgba(255,255,255,.08)}
+    section.hero{border-top:0}
+    .lead{max-width:62ch}
+    .panel p{color:var(--muted)}
+    .panel b{color:var(--text)}
+    .section-title{padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,.08)}
+    .section-title .hint{max-width:54ch; text-align:right}
+    @media (max-width: 980px){ .section-title .hint{display:none} }
+
+    /* ---------- Mobile drawer ---------- */
+    #menuBtn{display:none}
+    .drawer{display:none}
+    .drawer-inner{max-width:520px; width:100%}
+    .drawer-title{font-weight:900; letter-spacing:.2px}
+    .drawer-top{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px}
+    .drawer-links{display:flex; flex-direction:column; gap:8px; margin:14px 0}
+    .drawer-link{
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:800;
+      font-size:14px;
     }
-    .copybtn:hover{background:rgba(255,255,255,.95);border-color:var(--line2)}
-    .in{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.70);border-radius:16px;padding:12px;color:var(--ink);font-weight:850;outline:none;font-size:13px}
-    textarea.in{min-height:120px;resize:vertical}
-
-    footer{padding:28px 0 54px;color:var(--muted);font-weight:850;font-size:12px}
-    .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .toplink{padding:9px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.62);font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:11px}
-
-    /* Modal */
-    .modal-backdrop{position:fixed;inset:0;z-index:80;background:rgba(18,19,24,.28);opacity:0;pointer-events:none;transition:opacity .18s ease}
-    .modal{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .18s ease;padding:18px}
-    body.modal-open .modal, body.modal-open .modal-backdrop{opacity:1;pointer-events:auto}
-    .mcard{width:min(1120px,96vw);border-radius:28px;border:1px solid var(--line);background:rgba(255,255,255,.86);
-      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--shadow);overflow:hidden}
-    .mhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;border-bottom:1px solid var(--line)}
-    .mtitle{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;min-width:0}
-    .mtitle b{font-family:var(--serif);font-weight:950;letter-spacing:-.25px;font-size:18px}
-    .mtitle span{color:var(--muted);font-weight:950;letter-spacing:.14px;text-transform:uppercase;font-size:12px}
-    .mclose{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.70);cursor:pointer}
-    .mbody{display:grid;grid-template-columns:1.25fr .75fr;min-height:560px}
-    @media(max-width:1040px){.mbody{grid-template-columns:1fr}}
-    .mmedia{border-right:1px solid var(--line);background:rgba(18,19,24,.04);display:flex;align-items:center;justify-content:center;position:relative;min-height:360px}
-    @media(max-width:1040px){.mmedia{border-right:0;border-bottom:1px solid var(--line)}}
-    .mmedia img{width:100%;height:100%;object-fit:contain;background:rgba(18,19,24,.04);display:block}
-    .mnav{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 10px;pointer-events:none}
-    .mnav button{pointer-events:auto;width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.72);cursor:pointer}
-    .mnav button:disabled{opacity:.35;cursor:not-allowed}
-    .mside{padding:16px 16px 18px}
-    .mdesc{margin:0;color:var(--muted);font-weight:820;line-height:1.65;font-size:13.5px}
-    .mtags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .mthumbs{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-    .mthumbs button{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:14px;overflow:hidden;cursor:pointer;padding:0;aspect-ratio:1/1;transition:transform .08s ease,border-color .12s ease}
-    .mthumbs button:hover{transform:translateY(-1px);border-color:rgba(214,210,200,.85)}
-    .mthumbs img{width:100%;height:100%;object-fit:cover;display:block}
-
-    /* Toast */
-    .toast{
-      position:fixed;left:50%;top:18px;transform:translateX(-50%) translateY(-10px);z-index:120;
-      opacity:0;pointer-events:none;transition:opacity .16s ease, transform .16s ease;
-      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.88);box-shadow:0 10px 26px rgba(18,19,24,.12);
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-      color:var(--ink);font-weight:950;letter-spacing:.12px;font-size:12px;display:flex;align-items:center;gap:8px;user-select:none;
+    .drawer-link:hover{background:rgba(255,255,255,.05)}
+    .drawer-cta{display:flex; gap:10px; flex-wrap:wrap}
+    body.nav-open{overflow:hidden}
+    body.nav-open .drawer{
+      display:flex;
+      position:fixed;
+      inset:0;
+      z-index:80;
+      background:rgba(0,0,0,.55);
+      backdrop-filter: blur(6px);
+      align-items:flex-end;
+      justify-content:center;
+      padding:14px;
     }
-    .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-
-    /* Reveal motion */
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .36s ease, transform .36s ease}
-    .reveal.on{opacity:1;transform:translateY(0)}
-    @media (prefers-reduced-motion: reduce){
-      *{scroll-behavior:auto!important}
-      .reveal{opacity:1!important;transform:none!important;transition:none!important}
-      .work,.sig-card,.btn,.chip{transition:none!important}
+    body.nav-open .drawer-inner{
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:16px;
+      box-shadow: var(--shadow);
     }
+
+    /* ---------- Video UX ---------- */
+    .playbtn{
+      position:absolute;
+      inset:50% auto auto 50%;
+      transform:translate(-50%,-50%);
+      width:54px; height:54px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.20);
+      background:rgba(0,0,0,.38);
+      color:var(--text);
+      font-size:20px;
+      font-weight:900;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+      backdrop-filter: blur(6px);
+    }
+    .playbtn:active{transform:translate(-50%,-50%) scale(.98)}
+    .playing .playbtn{display:none}
+
+    .work{position:relative}
+    .work .thumb{position:relative}
+    .work .thumb video{background:rgba(255,255,255,.02)}
+    .work .playbtn{width:52px;height:52px;font-size:19px}
+
+    .best3{margin-top:18px}
+    .best3-head{display:flex; flex-direction:column; gap:6px; margin-bottom:10px}
+    .best3 h3{margin:0; font-size:16px}
+    .best3-hint{color:var(--muted); font-size:13px}
+    .best3-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px}
+    @media (max-width: 980px){.best3-grid{grid-template-columns:repeat(2, 1fr)}}
+    @media (max-width: 760px){.best3-grid{grid-template-columns:1fr}}
+    .best-card{border-radius:var(--radius2); border:1px solid var(--line); background:rgba(255,255,255,.03); overflow:hidden}
+    .best-thumb{position:relative; aspect-ratio:16/9; background:rgba(255,255,255,.02); overflow:hidden}
+    .best-thumb video{width:100%; height:100%; object-fit:cover; display:block}
+    .best-meta{padding:12px}
+    .best-title{font-weight:900; font-size:14px}
+    .best-tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+
+    /* Showreel height adapts to phone screens */
+    @media (max-width: 760px){
+      #showreel .video{max-height:70vh}
+      #showreel .video video{object-fit:cover}
+    }
+
+    /* ---------- Proof strip ---------- */
+    .proof{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-top:14px}
+    .proof-item{border:1px solid var(--line); background:rgba(255,255,255,.03); border-radius:14px; padding:12px}
+    .proof-k{color:var(--muted); font-size:12px}
+    .proof-v{font-weight:900; margin-top:2px; font-size:13px}
+    @media (max-width: 760px){ .proof{grid-template-columns:1fr} }
+
+    /* ---------- Video modal ---------- */
+    .vmodal{display:none}
+    body.vmodal-open{overflow:hidden}
+    body.vmodal-open .vmodal{
+      display:flex;
+      position:fixed;
+      inset:0;
+      z-index:120;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+    }
+    .vmodal-backdrop{position:absolute; inset:0; background:rgba(0,0,0,.65); backdrop-filter: blur(8px)}
+    .vmodal-inner{
+      position:relative;
+      width:min(980px, 100%);
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.14);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .vmodal-top{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid rgba(255,255,255,.10)}
+    .vmodal-title{font-weight:900}
+    .vmodal-video{aspect-ratio:16/9; background:rgba(0,0,0,.25)}
+    .vmodal-video video{width:100%; height:100%; object-fit:contain; display:block}
+    @media (max-width: 760px){ body.vmodal-open .vmodal{display:none} }
+
+    /* ---------- Floating CTA (mobile) ---------- */
+    .float-cta{display:none}
+    @media (max-width: 760px){
+      .float-cta{
+        display:flex;
+        position:fixed;
+        left:14px; right:14px; bottom:14px;
+        z-index:90;
+        gap:10px;
+        padding:10px;
+        border-radius:22px;
+        border:1px solid rgba(255,255,255,.14);
+        background:rgba(11,13,16,.70);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+      }
+      .float-btn{
+        flex:1;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:12px 12px;
+        border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,.03);
+        color:var(--text);
+        font-weight:900;
+        font-size:13px;
+        letter-spacing:.2px;
+      }
+      .float-btn.primary{
+        background:rgba(233,236,239,.14);
+        border-color:rgba(233,236,239,.26);
+      }
+      body{padding-bottom:92px}
+    }
+
+    /* ---------- Mobile-only header + section styling ---------- */
+    @media (max-width: 760px){
+      .topbar-inner{padding:7px 0; gap:10px}
+      .nav{display:none}
+      #menuBtn{display:inline-flex}
+      .dot{width:8px;height:8px; box-shadow:0 0 0 5px rgba(233,236,239,.10)}
+      .brand-title{font-size:14px}
+      .brand-sub{display:none}
+      .actions{gap:8px}
+      .btn{padding:8px 10px; font-size:12px}
+      .lang button{padding:7px 8px; font-size:11px}
+      #menuBtn{padding:8px 10px}
+      .actions a.btn{display:none} /* header CTA hidden (floating CTA exists) */
+
+      .topbar{transition: transform .18s ease}
+      body.scroll-down .topbar{transform: translateY(-110%)}
+      body.scroll-up .topbar{transform: translateY(0)}
+      body.nav-open .topbar{transform: translateY(0)}
+
+      section{padding:44px 0}
+      .hero{padding:46px 0 28px}
+      h1{font-size:34px}
+      .lead{font-size:15px}
+      .card-inner{padding:18px}
+      .panel{padding:14px}
+
+      section{background: rgba(255,255,255,.012)}
+      section:nth-of-type(even){background: rgba(255,255,255,.020)}
+      section .section-title{margin-bottom:14px}
+      section:nth-of-type(even) .section-title{border-bottom-style:dashed; border-bottom-color: rgba(255,255,255,.10)}
+      section .section-title h2{font-size:18px}
+      section:nth-of-type(3n) .section-title h2{letter-spacing:.4px}
+
+      .stats{grid-template-columns:1fr}
+      .works-grid{grid-template-columns:1fr; gap:12px}
+      .cards3{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      .ba{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+      footer .container{flex-direction:column; align-items:flex-start}
+    }
+
   </style>
 </head>
-
 <body class="lang-en">
-  <div id="top"></div>
-
-  <header class="topbar" role="banner">
-    <div class="wrap">
-      <div class="trow">
-        <div class="brand" aria-label="Brand">
-          <b><span class="dot" aria-hidden="true"></span><span id="brandName">Alex A</span></b>
-          <span>
-            <span data-lang="en" id="brandRole">Graphic Designer</span>
-            <span data-lang="ru" id="brandRoleRU">Графический дизайнер</span>
-          </span>
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="brand-title">Alex A</div>
+            <div class="brand-sub">Short-form • YouTube • Stream clips</div>
+          </div>
         </div>
 
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#about" data-nav><span data-lang="en">About</span><span data-lang="ru">Обо мне</span></a>
-          <a href="#works" data-nav><span data-lang="en">Works</span><span data-lang="ru">Работы</span></a>
-          <a href="#services" data-nav><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></a>
-          <a href="#process" data-nav><span data-lang="en">Process</span><span data-lang="ru">Процесс</span></a>
-          <a href="#pricing" data-nav><span data-lang="en">Pricing</span><span data-lang="ru">Цены</span></a>
-          <a href="#clients" data-nav><span data-lang="en">Clients</span><span data-lang="ru">Клиенты</span></a>
-          <a href="#awards" data-nav><span data-lang="en">Awards</span><span data-lang="ru">Награды</span></a>
-          <a href="#reviews" data-nav><span data-lang="en">Reviews</span><span data-lang="ru">Отзывы</span></a>
-          <a href="#faq" data-nav><span data-lang="en">FAQ</span><span data-lang="ru">FAQ</span></a>
-          <a href="#contact" data-nav><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#showreel">Showreel</a>
+          <a href="#works">Works</a>
+          <a href="#services">Services</a>
+          <a href="#before-after">Before/After</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="actions">
-          <div class="lang" role="group" aria-label="Language toggle">
-            <button type="button" id="btnEN" class="active" aria-label="Switch to English">EN</button>
-            <button type="button" id="btnRU" aria-label="Переключить на русский">RU</button>
+          
+          <button class="btn small" id="menuBtn" type="button" aria-label="Menu">☰</button><div class="lang" role="group" aria-label="Language">
+            <button class="active" id="btnEN" type="button">EN</button>
+            <button id="btnRU" type="button">RU</button>
           </div>
-
-          <a class="btn primary" href="#contact" id="ctaTop"><span aria-hidden="true">↳</span><span data-lang="en">Request</span><span data-lang="ru">Запрос</span></a>
-
-          <button class="iconbtn burger" id="burger" type="button" aria-label="Open menu"><i aria-hidden="true"></i></button>
+          <a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Telegram</a>
+          <a class="btn" href="mailto:alex.altukhov.s@gmail.com">Email</a>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-  <aside class="drawer" aria-label="Mobile menu">
-    <div class="dhead">
-      <b><span data-lang="en">Menu</span><span data-lang="ru">Меню</span></b>
-      <button class="iconbtn" id="drawerClose" type="button" aria-label="Close menu">✕</button>
-    </div>
-    <div class="dlinks" id="drawerLinks">
-      <a href="#about"><span data-lang="en">About</span><span data-lang="ru">Обо мне</span></a>
-      <a href="#works"><span data-lang="en">Works</span><span data-lang="ru">Работы</span></a>
-      <a href="#services"><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></a>
-      <a href="#process"><span data-lang="en">Process</span><span data-lang="ru">Процесс</span></a>
-      <a href="#pricing"><span data-lang="en">Pricing</span><span data-lang="ru">Цены</span></a>
-      <a href="#clients"><span data-lang="en">Clients</span><span data-lang="ru">Клиенты</span></a>
-      <a href="#awards"><span data-lang="en">Awards</span><span data-lang="ru">Награды</span></a>
-      <a href="#reviews"><span data-lang="en">Reviews</span><span data-lang="ru">Отзывы</span></a>
-      <a href="#faq"><span data-lang="en">FAQ</span><span data-lang="ru">FAQ</span></a>
-      <a href="#contact"><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></a>
-    </div>
-    <div class="dfoot">
-      <a class="btn primary" href="#contact"><span aria-hidden="true">↳</span><span data-lang="en">Request</span><span data-lang="ru">Запрос</span></a>
-    </div>
-  </aside>
-
-  <main role="main">
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="glass hero-main reveal">
-            <div class="hero-kicker">
-              <span data-lang="en">Premium minimal portfolio</span>
-              <span data-lang="ru">Премиум минимал‑портфолио</span>
-            </div>
-
-            <h1 id="heroTitle">
-              <span data-lang="en">Alex A — Graphic Designer</span>
-              <span data-lang="ru">Alex A — Графический дизайнер</span>
-            </h1>
-
-            <p class="tagline" id="heroTagline">
-              <span data-lang="en">A design created just for you.</span>
-              <span data-lang="ru">Дизайн, созданный только для вас.</span>
-            </p>
-
-            <div class="hero-cta">
-              <a class="btn primary" href="#works"><span aria-hidden="true">⬚</span><span data-lang="en">Browse categories</span><span data-lang="ru">Смотреть категории</span></a>
-              <a class="btn" href="#services"><span aria-hidden="true">✦</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></a>
-              <a class="btn" href="#contact"><span aria-hidden="true">↳</span><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></a>
-            </div>
-          </div>
-
-          <div class="glass hero-side reveal">
-            <div class="kpi-grid" aria-label="Highlights">
-              <div class="kpi"><b id="kpiYear">5+</b><span data-lang="en">Years in design</span><span data-lang="ru">Лет в дизайне</span></div>
-              <div class="kpi"><b id="kpiProjects">16</b><span data-lang="en">Works on site</span><span data-lang="ru">Работ на сайте</span></div>
-              <div class="kpi"><b id="kpiBrands">—</b><span data-lang="en">Brands supported</span><span data-lang="ru">Брендов</span></div>
-            </div>
-
-            <div class="micro">
-              <div class="pill"><span aria-hidden="true">⌁</span><span data-lang="en">Saint Petersburg</span><span data-lang="ru">Санкт‑Петербург</span></div>
-              <div class="pill"><span aria-hidden="true">⟡</span><span data-lang="en">EN / RU</span><span data-lang="ru">RU / EN</span></div>
-            </div>
-          </div>
-        </div>
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-top">
+        <div class="drawer-title">Menu</div>
+        <button class="btn small" id="menuClose" type="button" aria-label="Close">✕</button>
       </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="about">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">About</span><span data-lang="ru">Обо мне</span></h2>
-            <p>
-              <span data-lang="en">Short introduction, approach, and what you can expect from the workflow.</span>
-              <span data-lang="ru">Коротко: подход, принципы и что вы получите.</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="grid2">
-          <div class="glass card reveal">
-            <h3><span data-lang="en">Profile</span><span data-lang="ru">Профиль</span></h3>
-            <p id="aboutText">
-              <span data-lang="en">Clean premium visuals with strong typography and clear hierarchy — designed to look expensive and read instantly.</span>
-              <span data-lang="ru">Чистые премиальные визуалы с сильной типографикой и понятной иерархией — чтобы выглядело дорого и читалось мгновенно.</span>
-            </p>
-            <div class="list">
-              <div class="li">✦ <span data-lang="en">Soft glass UI, premium spacing, large headings</span><span data-lang="ru">Мягкое “стекло”, премиальный воздух, крупные заголовки</span></div>
-              <div class="li">✦ <span data-lang="en">Clear workflow: brief → concepts → final</span><span data-lang="ru">Понятный процесс: бриф → концепции → финал</span></div>
-              <div class="li">✦ <span data-lang="en">English / Russian communication</span><span data-lang="ru">Общение на русском и английском</span></div>
-            </div>
-          </div>
-
-          <div class="glass card reveal">
-            <h3><span data-lang="en">Tools</span><span data-lang="ru">Инструменты</span></h3>
-            <p><span data-lang="en">System tools only — replace/edit this list anytime.</span><span data-lang="ru">Список можно менять в коде в любой момент.</span></p>
-            <div class="list" id="toolsList"></div>
-          </div>
-        </div>
+      <div class="drawer-links">
+        <a href="#showreel" class="drawer-link">Showreel</a>
+        <a href="#works" class="drawer-link">Works</a>
+        <a href="#services" class="drawer-link">Services</a>
+        <a href="#before-after" class="drawer-link">Before/After</a>
+        <a href="#reviews" class="drawer-link">Reviews</a>
+        <a href="#contact" class="drawer-link">Contact</a>
       </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section" id="works">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Works</span><span data-lang="ru">Работы</span></h2>
-            <p><span data-lang="en">Filters + search + sorting. Open each work in a clean gallery viewer.</span><span data-lang="ru">Фильтры + поиск + сортировка. Открывай работы в галерее.</span></p>
-          </div>
-        </div>
-
-        <div class="reveal" style="margin-bottom:14px">
-          <div class="sec-head" style="margin-bottom:12px">
-            <div class="left">
-              <h2 style="font-size:26px"><span data-lang="en">Signature selection</span><span data-lang="ru">Избранное</span></h2>
-              <p><span data-lang="en">Premium entries — presented like high-value cases.</span><span data-lang="ru">Премиум‑работы — поданы как “дорогие кейсы”.</span></p>
-            </div>
-          </div>
-          <div class="sig-grid" id="sigGrid"></div>
-        </div>
-
-        <div class="controls reveal">
-          <div class="filters" id="filters"></div>
-          <div class="search-sort">
-            <div class="field" aria-label="Search">
-              <span aria-hidden="true" style="opacity:.75">⌕</span>
-              <input id="search" type="search"
-                     placeholder="Search by title…"
-                     data-ph-en="Search by title…"
-                     data-ph-ru="Поиск по названию…" />
-            </div>
-            <select id="sort" aria-label="Sort">
-              <option value="featured" data-lang="en">Sort: Featured</option>
-              <option value="featured" data-lang="ru">Сортировка: Избранное</option>
-              <option value="newest" data-lang="en">Sort: Newest</option>
-              <option value="newest" data-lang="ru">Сортировка: Новые</option>
-              <option value="best" data-lang="en">Sort: Best</option>
-              <option value="best" data-lang="ru">Сортировка: Лучшее</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="masonry" id="grid" aria-label="Works grid"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="services">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></h2>
-            <p><span data-lang="en">Built around consistency, speed, and premium readability.</span><span data-lang="ru">Вокруг системы, скорости и премиальной читаемости.</span></p>
-          </div>
-        </div>
-        <div class="grid3" id="servicesGrid"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="process">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Process</span><span data-lang="ru">Процесс</span></h2>
-            <p><span data-lang="en">Simple workflow to keep things fast and predictable.</span><span data-lang="ru">Простой процесс, чтобы всё было быстро и предсказуемо.</span></p>
-          </div>
-        </div>
-
-        <div class="grid3">
-          <div class="glass card reveal"><h3><span data-lang="en">01 — Brief</span><span data-lang="ru">01 — Бриф</span></h3><p><span data-lang="en">Goal, formats, references, deadline — we define the scope.</span><span data-lang="ru">Цель, форматы, референсы, срок — фиксируем задачу.</span></p></div>
-          <div class="glass card reveal"><h3><span data-lang="en">02 — Concepts</span><span data-lang="ru">02 — Концепции</span></h3><p><span data-lang="en">1–2 directions, choose the strongest, refine the hierarchy.</span><span data-lang="ru">1–2 направления, выбираем сильное, доводим иерархию.</span></p></div>
-          <div class="glass card reveal"><h3><span data-lang="en">03 — Final</span><span data-lang="ru">03 — Финал</span></h3><p><span data-lang="en">Polish details and deliver in the formats you need.</span><span data-lang="ru">Доводим детали и отдаём в нужных форматах.</span></p></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="pricing">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Pricing</span><span data-lang="ru">Цены</span></h2>
-            <p><span data-lang="en">Starting points — final quote depends on scope and timing.</span><span data-lang="ru">Ориентиры — финальная цена зависит от задачи и сроков.</span></p>
-          </div>
-        </div>
-
-        <div class="grid3">
-          <div class="glass card price reveal"><div class="inner"><h3><span data-lang="en">Quick visuals</span><span data-lang="ru">Быстрые визуалы</span></h3><p><span data-lang="en">Thumbnails and short-format packaging.</span><span data-lang="ru">Превью и короткое оформление.</span></p><div class="amt">500–1500 ₽</div></div></div>
-          <div class="glass card price reveal"><div class="inner"><h3><span data-lang="en">Full package</span><span data-lang="ru">Полный пакет</span></h3><p><span data-lang="en">Cohesive system across channel/profile formats.</span><span data-lang="ru">Система “под ключ” под форматы канала/профиля.</span></p><div class="amt">4 000 ₽</div></div></div>
-          <div class="glass card price reveal"><div class="inner"><h3><span data-lang="en">Custom</span><span data-lang="ru">Индивидуально</span></h3><p><span data-lang="en">Prices are easy to discuss in DM — I can also offer a discount depending on scope.</span><span data-lang="ru">Цены легко обсуждаются в личке — по объёму могу сделать скидку.</span></p><div class="amt"><span data-lang="en">DM for quote</span><span data-lang="ru">Пиши в личку</span></div></div></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="clients">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Clients</span><span data-lang="ru">Клиенты</span></h2>
-            <p><span data-lang="en">Neutral placeholders (no real brands). Replace later if you want.</span><span data-lang="ru">Нейтральные плейсхолдеры (без брендов). Можно заменить позже.</span></p>
-          </div>
-        </div>
-        <div class="logos reveal" id="logos"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="awards">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Awards</span><span data-lang="ru">Награды</span></h2>
-            <p><span data-lang="en">Placeholders by default — replace with real milestones.</span><span data-lang="ru">Плейсхолдеры — заменишь на реальные достижения.</span></p>
-          </div>
-        </div>
-        <div class="grid3" id="awardsGrid"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="reviews">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Reviews</span><span data-lang="ru">Отзывы</span></h2>
-            <p><span data-lang="en">Short, outcome-focused.</span><span data-lang="ru">Коротко, по делу, про результат.</span></p>
-          </div>
-        </div>
-        <div class="grid3" id="reviewsGrid"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section compact" id="faq">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">FAQ</span><span data-lang="ru">FAQ</span></h2>
-            <p><span data-lang="en">Fast answers before you message.</span><span data-lang="ru">Ответы перед тем, как написать.</span></p>
-          </div>
-        </div>
-        <div class="grid2" id="faqGrid"></div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section" id="contact">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="left">
-            <h2><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span></h2>
-            <p><span data-lang="en">Fastest way: Telegram or copy the email.</span><span data-lang="ru">Быстрее всего: Telegram или копирование email.</span></p>
-          </div>
-        </div>
-
-        <div class="contact">
-          <div class="glass card reveal">
-            <h3><span data-lang="en">Direct</span><span data-lang="ru">Напрямую</span></h3>
-            <p><span data-lang="en">Click Email to reveal it and copy instantly.</span><span data-lang="ru">Нажми Email — покажу адрес и можно скопировать.</span></p>
-
-            <div class="contact-row" style="margin-top:12px">
-              <a class="btn primary" id="tgBtn" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">
-                <span aria-hidden="true">✦</span><span data-lang="en">Telegram</span><span data-lang="ru">Telegram</span>
-              </a>
-
-              <div class="email-wrap" id="emailWrap">
-                <button class="btn" type="button" id="emailBtn"><span aria-hidden="true">✉</span><span data-lang="en">Email</span><span data-lang="ru">Email</span></button>
-                <div class="email-panel" id="emailPanel" aria-live="polite">
-                  <div class="email-text" id="emailText">alex.altukhov.s@gmail.com</div>
-                  <button class="copybtn" type="button" id="copyBtn"><span data-lang="en">Copy</span><span data-lang="ru">Копировать</span></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="list" style="margin-top:14px">
-              <div class="li">⌁ <span data-lang="en">Location: Saint Petersburg</span><span data-lang="ru">Город: Санкт‑Петербург</span></div>
-              <div class="li">⟡ <span data-lang="en">Languages: EN / RU</span><span data-lang="ru">Языки: RU / EN</span></div>
-              <div class="li">✦ <span data-lang="en">Prefer Telegram for fast replies</span><span data-lang="ru">Лучше писать в Telegram — отвечаю быстрее</span></div>
-            </div>
-          </div>
-
-          <div class="glass card reveal">
-            <h3><span data-lang="en">Request form</span><span data-lang="ru">Форма</span></h3>
-            <p><span data-lang="en">UI stub for GitHub Pages — please use Telegram or copy the email.</span><span data-lang="ru">UI‑заглушка для GitHub Pages — лучше Telegram или копировать email.</span></p>
-
-            <form id="contactForm" style="margin-top:12px;display:grid;gap:10px">
-              <input class="in" id="cName" type="text" autocomplete="name" placeholder="Your name" data-ph-en="Your name" data-ph-ru="Ваше имя" />
-              <input class="in" id="cEmail" type="email" autocomplete="email" placeholder="Your email" data-ph-en="Your email" data-ph-ru="Ваш email" />
-              <textarea class="in" id="cMsg" placeholder="Message" data-ph-en="Message" data-ph-ru="Сообщение"></textarea>
-
-              <div class="contact-row">
-                <button class="btn primary" type="submit"><span aria-hidden="true">↳</span><span data-lang="en">Send</span><span data-lang="ru">Отправить</span></button>
-                <span style="color:var(--muted);font-weight:850;font-size:12px;line-height:1.35">
-                  <span data-lang="en">Tip: attach 2–3 references to speed up the result.</span>
-                  <span data-lang="ru">Совет: приложи 2–3 референса — будет быстрее и точнее.</span>
-                </span>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer role="contentinfo">
-      <div class="wrap">
-        <div class="foot">
-          <div>© <span id="year"></span> <span id="footName">Alex A</span></div>
-          <a class="toplink" href="#top">↑ <span data-lang="en">Top</span><span data-lang="ru">Вверх</span></a>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Modal -->
-  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="mcard" role="dialog" aria-modal="true" aria-label="Work preview">
-      <div class="mhead">
-        <div class="mtitle"><b id="mTitle">—</b><span id="mCat">—</span></div>
-        <button class="mclose" id="mClose" type="button" aria-label="Close">✕</button>
-      </div>
-      <div class="mbody">
-        <div class="mmedia">
-          <img id="mImg" alt="Preview" />
-          <div class="mnav" aria-label="Gallery navigation">
-            <button id="mPrev" type="button" aria-label="Previous">‹</button>
-            <button id="mNext" type="button" aria-label="Next">›</button>
-          </div>
-        </div>
-        <div class="mside">
-          <p class="mdesc" id="mDesc">—</p>
-          <div class="mtags" id="mTags"></div>
-          <div class="mthumbs" id="mThumbs" aria-label="Thumbnails"></div>
-        </div>
+      <div class="drawer-cta">
+        <a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Telegram</a>
+        <a class="btn" href="mailto:alex.altukhov.s@gmail.com">Email</a>
       </div>
     </div>
   </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">✓ Copied</div>
 
-  <script>
-    // ===========================
-    // CONFIG: edit content here
-    // ===========================
-    const PROFILE = {
-      name: "Alex A",
-      role_en: "Graphic Designer",
-      role_ru: "Графический дизайнер",
-      email: "alex.altukhov.s@gmail.com",
-      telegramUrl: "https://t.me/tebyaebetdm",
-      years: "5+",
-      brands: "—"
-    };
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="grid-hero">
+        <div class="card">
+          <div class="card-inner">
+            <div data-lang="en">
+              <h1>Short-form Video Editor<br/>for TikTok / Reels / Shorts</h1>
+              <p class="lead">Fast pacing, clean captions, strong hooks — built for retention. I also edit YouTube videos and stream highlights. AI-enhanced workflow for speed and quality.</p>
+              <div class="row-actions">
+                <a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Get a test edit</a>
+                <a class="btn" href="#works">See works</a>
+              </div>
+              <div class="chips" aria-label="Highlights">
+                <div class="chip"><b>Speed:</b> 1 min final ≈ 20–30 min edit</div>
+                <div class="chip"><b>Capacity:</b> up to 6 shorts/day</div>
+                <div class="chip"><b>Tools:</b> CapCut • Premiere • AE • DaVinci</div>
+              </div>
+              <div class="stats">
+                <div class="stat"><div class="k">Best for</div><div class="v">Hooks • Captions • Tempo</div></div>
+                <div class="stat"><div class="k">Deliverables</div><div class="v">Shorts + subtitles + cover</div></div>
+              </div>
+            </div>
 
-    const I18N = {
-      toastCopied: { en: "Copied", ru: "Скопировано" },
-      toastUseEmail: { en: "Please copy the email", ru: "Скопируйте email" },
-      toastOpened: { en: "Email shown", ru: "Email показан" }
-    };
-
-    const CATEGORIES = [
-      { key:"all", label:{en:"All", ru:"Все"} },
-      { key:"Social", label:{en:"Social", ru:"Social"} },
-      { key:"3D", label:{en:"3D", ru:"3D"} },
-      { key:"Posters", label:{en:"Posters", ru:"Постеры"} },
-      { key:"preview", label:{en:"Preview", ru:"Превью"} },
-      { key:"Branding", label:{en:"Branding", ru:"Брендинг"} },
-      { key:"banners", label:{en:"Banners", ru:"Баннеры"} },
-      { key:"full-decoration", label:{en:"Full decoration", ru:"Полное оформление"} },
-    ];
-
-    // 16 works (placeholders). Replace assets/works/*.jpg with your real images.
-    const WORKS = [
-      { id:"w01", cat:"Branding", premium:true, featured:true, bestScore:98, date:"2026-01-10",
-        title:{en:"Brand Identity — Platinum", ru:"Айдентика — Platinum"},
-        sub:{en:"Premium identity layout with strict hierarchy.", ru:"Премиальная айдентика с чёткой иерархией."},
-        tags:["Logo","Layout","Typography"], images:["assets/works/01.jpg"] },
-
-      { id:"w02", cat:"full-decoration", premium:true, featured:true, bestScore:96, date:"2026-01-22",
-        title:{en:"Channel Decoration — Full Set", ru:"Оформление канала — полный сет"},
-        sub:{en:"Unified visuals across profile formats.", ru:"Единый стиль под форматы профиля."},
-        tags:["System","Packaging","SMM"], images:["assets/works/02.jpg","assets/works/03.jpg","assets/works/04.jpg"] },
-
-      { id:"w03", cat:"Posters", premium:true, featured:true, bestScore:94, date:"2025-12-18",
-        title:{en:"Poster — Editorial Type", ru:"Постер — editorial типографика"},
-        sub:{en:"Clean composition with premium spacing.", ru:"Чистая композиция и премиальный воздух."},
-        tags:["Typography","Layout"], images:["assets/works/05.jpg"] },
-
-      { id:"w04", cat:"preview", premium:false, featured:false, bestScore:88, date:"2026-01-28",
-        title:{en:"Thumbnail System #01", ru:"Система превью #01"},
-        sub:{en:"Readable structure and hook focus.", ru:"Читаемая структура и акцент на хук."},
-        tags:["CTR","Hierarchy","Typography"], images:["assets/works/06.jpg","assets/works/07.jpg"] },
-
-      { id:"w05", cat:"Social", premium:false, featured:false, bestScore:84, date:"2026-02-02",
-        title:{en:"Social Pack — Minimal", ru:"Соцпак — минимал"},
-        sub:{en:"Consistent set across formats.", ru:"Единый набор под разные форматы."},
-        tags:["SMM","System","Grid"], images:["assets/works/08.jpg","assets/works/09.jpg","assets/works/10.jpg"] },
-
-      { id:"w06", cat:"banners", premium:false, featured:false, bestScore:80, date:"2025-12-05",
-        title:{en:"Banner Set — Clean", ru:"Сет баннеров — clean"},
-        sub:{en:"Premium readability, minimal decoration.", ru:"Премиальная читаемость, минимум декора."},
-        tags:["Layout","Packaging"], images:["assets/works/11.jpg"] },
-
-      { id:"w07", cat:"3D", premium:false, featured:false, bestScore:78, date:"2025-11-20",
-        title:{en:"3D Model Presentation", ru:"Презентация 3D‑модели"},
-        sub:{en:"Simple layout that supports the object.", ru:"Простая верстка, подчёркивающая объект."},
-        tags:["3D","Layout"], images:["assets/works/12.jpg"] },
-
-      { id:"w08", cat:"Posters", premium:false, featured:false, bestScore:79, date:"2025-10-12",
-        title:{en:"Poster — Contrast Study", ru:"Постер — контраст"},
-        sub:{en:"High contrast with calm premium tone.", ru:"Высокий контраст в спокойном премиум‑тоне."},
-        tags:["Typography","Composition"], images:["assets/works/13.jpg"] },
-
-      { id:"w09", cat:"preview", premium:false, featured:false, bestScore:85, date:"2026-02-05",
-        title:{en:"Thumbnail — Minimal Hook", ru:"Превью — минимал хук"},
-        sub:{en:"Short copy, big hierarchy, clean background.", ru:"Короткий текст, большая иерархия, чистый фон."},
-        tags:["CTR","Typography"], images:["assets/works/14.jpg"] },
-
-      { id:"w10", cat:"Branding", premium:false, featured:false, bestScore:76, date:"2025-09-09",
-        title:{en:"Brand Assets — System", ru:"Бренд‑визуалы — система"},
-        sub:{en:"Template-driven approach for consistent output.", ru:"Шаблонный подход для стабильных результатов."},
-        tags:["System","Templates"], images:["assets/works/15.jpg","assets/works/16.jpg"] },
-
-      { id:"w11", cat:"Social", premium:false, featured:false, bestScore:73, date:"2025-08-21",
-        title:{en:"Social Covers — Calm", ru:"Обложки — спокойный стиль"},
-        sub:{en:"Premium spacing and soft glass accents.", ru:"Премиальный воздух и мягкое “стекло”."},
-        tags:["SMM","Layout"], images:["assets/works/17.jpg"] },
-
-      { id:"w12", cat:"banners", premium:false, featured:false, bestScore:72, date:"2025-07-30",
-        title:{en:"Banner — Product Focus", ru:"Баннер — фокус на продукт"},
-        sub:{en:"Clear message and clean hierarchy.", ru:"Понятный месседж и чистая иерархия."},
-        tags:["Hierarchy","Packaging"], images:["assets/works/18.jpg"] },
-
-      { id:"w13", cat:"full-decoration", premium:false, featured:false, bestScore:82, date:"2025-12-28",
-        title:{en:"Profile Decoration — Pack", ru:"Оформление профиля — пак"},
-        sub:{en:"Covers + highlights + consistent type.", ru:"Обложки + хайлайты + единая типографика."},
-        tags:["Packaging","SMM"], images:["assets/works/19.jpg","assets/works/20.jpg"] },
-
-      { id:"w14", cat:"preview", premium:false, featured:false, bestScore:86, date:"2026-01-04",
-        title:{en:"Thumbnail System #02", ru:"Система превью #02"},
-        sub:{en:"Variants for testing hooks and layouts.", ru:"Варианты для теста хуков и верстки."},
-        tags:["CTR","A/B","Typography"], images:["assets/works/21.jpg","assets/works/22.jpg","assets/works/23.jpg"] },
-
-      { id:"w15", cat:"Posters", premium:false, featured:false, bestScore:70, date:"2025-06-14",
-        title:{en:"Poster — Soft Minimal", ru:"Постер — мягкий минимал"},
-        sub:{en:"Subtle gradient gloss and clean type.", ru:"Лёгкий глянец и чистая типографика."},
-        tags:["Typography","Layout"], images:["assets/works/24.jpg"] },
-
-      { id:"w16", cat:"3D", premium:false, featured:false, bestScore:69, date:"2025-05-02",
-        title:{en:"3D Teaser Layout", ru:"3D тизер‑верстка"},
-        sub:{en:"A minimal stage for the model.", ru:"Минимальная сцена для модели."},
-        tags:["3D","Composition"], images:["assets/works/25.jpg"] },
-    ];
-
-    const SERVICES = [
-      { title:{en:"Channel / profile packaging", ru:"Упаковка канала / профиля"}, text:{en:"Covers, headers, highlights, and consistent system across formats.", ru:"Обложки, шапки, хайлайты и единая система под форматы."} },
-      { title:{en:"Thumbnails & CTR visuals", ru:"Превью и CTR‑визуалы"}, text:{en:"Hook-focused layouts readable on small screens.", ru:"Верстка под хук, чтобы читалось в маленьком размере."} },
-      { title:{en:"Posters & announcements", ru:"Постеры и анонсы"}, text:{en:"Editorial composition, clean typography, premium spacing.", ru:"Editorial‑композиция, чистая типографика, премиальный воздух."} },
-      { title:{en:"Banners & ads", ru:"Баннеры и реклама"}, text:{en:"Set for multiple sizes: variations and hierarchy.", ru:"Набор под размеры: вариации и иерархия."} },
-      { title:{en:"Branding micro-systems", ru:"Брендинг‑микросистемы"}, text:{en:"Palette + typography + templates for consistent output.", ru:"Палитра + типографика + шаблоны для стабильного результата."} },
-      { title:{en:"3D presentation layouts", ru:"Верстка под 3D‑презентации"}, text:{en:"Minimal layouts that highlight the object.", ru:"Минимал‑верстка, чтобы модель была в фокусе."} },
-    ];
-
-    const REVIEWS = [
-      { text:{en:"Clean, premium look. Everything reads instantly — exactly what I needed.", ru:"Чисто и премиально. Всё читается мгновенно — именно то, что нужно."}, author:{en:"Client", ru:"Клиент"} },
-      { text:{en:"Strong system approach: covers + thumbnails match perfectly across formats.", ru:"Сильный системный подход: обложки + превью идеально сочетаются."}, author:{en:"Client", ru:"Клиент"} },
-      { text:{en:"Fast work and great taste. The result looks expensive without being noisy.", ru:"Быстро и со вкусом. Результат выглядит дорого без лишнего шума."}, author:{en:"Client", ru:"Клиент"} },
-    ];
-
-    const FAQ = [
-      { q:{en:"How fast can you start?", ru:"Как быстро можешь начать?"}, a:{en:"Usually within 1–2 days. Urgent requests — discuss in Telegram.", ru:"Обычно в течение 1–2 дней. Срочные — обсудим в Telegram."} },
-      { q:{en:"How many revisions are included?", ru:"Сколько правок включено?"}, a:{en:"Default: 2 rounds. A clear brief makes it fast.", ru:"По умолчанию: 2 раунда. Хороший бриф ускоряет работу."} },
-      { q:{en:"Do you work in EN and RU?", ru:"Работаешь на русском и английском?"}, a:{en:"Yes. Communication and text preparation in EN or RU.", ru:"Да. Общение и тексты — EN или RU."} },
-      { q:{en:"What do you need from me?", ru:"Что нужно от меня?"}, a:{en:"Goal, references, sizes, and must-have text/rules.", ru:"Цель, референсы, размеры и обязательные тексты/правила."} },
-      { q:{en:"Can we discuss a discount?", ru:"Можно ли обсудить скидку?"}, a:{en:"Yes — depends on scope and repeat work. Message me.", ru:"Да — зависит от объёма и повторных задач. Напиши мне."} },
-    ];
-
-    const LOGOS = ["Studio","Agency","Lab","Creative","Digital","Design","Brand","Media","Works","Co","Group","Project"];
-    const AWARDS = [
-      { title:{en:"Award placeholder", ru:"Плейсхолдер награды"}, year:"2026", note:{en:"Replace with real award / shortlist / milestone.", ru:"Заменить на реальную награду / шорт‑лист / достижение."} },
-      { title:{en:"Milestone placeholder", ru:"Плейсхолдер достижения"}, year:"2025", note:{en:"Add 1 line context: what it was and why it matters.", ru:"Добавь контекст: что это и почему важно."} },
-      { title:{en:"Recognition placeholder", ru:"Плейсхолдер признания"}, year:"2024", note:{en:"Keep it minimal: name + year + short note.", ru:"Минимализм: название + год + короткая заметка."} },
-    ];
-
-    // ===========================
-    // Utilities
-    // ===========================
-    const $ = (s, r=document)=>r.querySelector(s);
-    const $$ = (s, r=document)=>Array.from(r.querySelectorAll(s));
-    let currentLang = localStorage.getItem("lang") || "en";
-    let currentCat = "all";
-    let currentQuery = "";
-    let currentSort = "featured";
-
-    function toast(msg){
-      const t = $("#toast");
-      t.textContent = "✓ " + msg;
-      t.classList.add("on");
-      clearTimeout(toast._t);
-      toast._t = setTimeout(()=>t.classList.remove("on"), 1500);
-    }
-
-    function svgPlaceholder(label){
-      const safe = String(label||"").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-      const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#d6d2c8"/>
-              <stop offset="1" stop-color="#ffffff"/>
-            </linearGradient>
-            <radialGradient id="r" cx="35%" cy="22%" r="70%">
-              <stop offset="0" stop-color="white" stop-opacity=".65"/>
-              <stop offset="1" stop-color="white" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="1400" height="900" rx="40" fill="url(#g)"/>
-          <rect width="1400" height="900" rx="40" fill="url(#r)"/>
-          <rect x="60" y="60" width="1280" height="780" rx="28" fill="rgba(255,255,255,.58)" stroke="rgba(18,19,24,.12)"/>
-          <text x="110" y="190" font-family="Georgia, 'Times New Roman', Times, serif" font-size="64" font-weight="700" fill="rgba(18,19,24,.88)">${safe}</text>
-          <text x="110" y="255" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="18" font-weight="700" letter-spacing=".14em" fill="rgba(18,19,24,.55)">PLACEHOLDER · assets/works/..</text>
-          <line x1="110" y1="288" x2="1290" y2="288" stroke="rgba(18,19,24,.14)"/>
-          <text x="110" y="335" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="18" font-weight="650" fill="rgba(18,19,24,.58)">Replace this with your real image later.</text>
-        </svg>`;
-      return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
-    }
-
-    function safeImg(imgEl, label){
-      imgEl.addEventListener("error", ()=>{ imgEl.src = svgPlaceholder(label); });
-    }
-
-    function setLang(next){
-      currentLang = next;
-      document.body.classList.toggle("lang-en", next==="en");
-      document.body.classList.toggle("lang-ru", next==="ru");
-      $("#btnEN").classList.toggle("active", next==="en");
-      $("#btnRU").classList.toggle("active", next==="ru");
-      localStorage.setItem("lang", next);
-
-      // placeholders
-      $$("[data-ph-en]").forEach(el=>{
-        el.setAttribute("placeholder", next==="ru" ? el.dataset.phRu : el.dataset.phEn);
-      });
-
-      renderSignature();
-      renderFilters();
-      renderWorks();
-      renderServices();
-      renderAwards();
-      renderReviews();
-      renderFAQ();
-
-      if(document.body.classList.contains("modal-open")) renderModal();
-    }
-
-    function catLabel(key){
-      const c = CATEGORIES.find(x=>x.key===key);
-      if(!c) return key;
-      return currentLang==="ru" ? c.label.ru : c.label.en;
-    }
-
-    function matches(it){
-      if(currentCat !== "all" && it.cat !== currentCat) return false;
-      if(!currentQuery) return true;
-      const title = (currentLang==="ru" ? it.title.ru : it.title.en).toLowerCase();
-      return title.includes(currentQuery);
-    }
-
-    function sortItems(arr){
-      const copy = arr.slice();
-      if(currentSort === "newest"){
-        copy.sort((a,b)=> (b.date||"").localeCompare(a.date||""));
-      } else if(currentSort === "best"){
-        copy.sort((a,b)=> (b.bestScore||0)-(a.bestScore||0));
-      } else {
-        copy.sort((a,b)=>{
-          const fa = a.featured?0:1, fb = b.featured?0:1;
-          if(fa!==fb) return fa-fb;
-          const bs = (b.bestScore||0)-(a.bestScore||0);
-          if(bs!==0) return bs;
-          return (b.date||"").localeCompare(a.date||"");
-        });
-      }
-      return copy;
-    }
-
-    // ===========================
-    // Render: signature
-    // ===========================
-    function renderSignature(){
-      const sig = WORKS.filter(x=>x.featured).slice(0,3);
-      const sigGrid = $("#sigGrid");
-      sigGrid.innerHTML = "";
-      sig.forEach(it=>{
-        const title = currentLang==="ru" ? it.title.ru : it.title.en;
-        const sub = currentLang==="ru" ? it.sub.ru : it.sub.en;
-
-        const el = document.createElement("article");
-        el.className = "sig-card";
-        el.tabIndex = 0;
-        el.role = "button";
-        el.innerHTML = `
-          <div class="sig-top">
-            <span>${catLabel(it.cat)}</span>
-            <span class="sig-badge">${currentLang==="ru" ? "избранное" : "signature"}</span>
+            <div data-lang="ru">
+              <h1>Монтажёр коротких видео<br/>TikTok / Reels / Shorts</h1>
+              <p class="lead">Динамика, читаемые субтитры, мощные хуки — для удержания с первых секунд. Также монтирую YouTube и хайлайты со стримов. Использую AI-инструменты для скорости и качества.</p>
+              <div class="row-actions">
+                <a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Сделать тестовый монтаж</a>
+                <a class="btn" href="#works">Посмотреть работы</a>
+              </div>
+              <div class="chips" aria-label="Highlights">
+                <div class="chip"><b>Скорость:</b> 1 мин финала ≈ 20–30 мин монтажа</div>
+                <div class="chip"><b>Объём:</b> до 6 shorts/день</div>
+                <div class="chip"><b>Инструменты:</b> CapCut • Premiere • AE • DaVinci</div>
+              </div>
+              <div class="stats">
+                <div class="stat"><div class="k">Сильное</div><div class="v">Хуки • Сабы • Темп</div></div>
+                <div class="stat"><div class="k">Выдаю</div><div class="v">Шортсы + субтитры + обложка</div></div>
+              </div>
+            </div>
           </div>
-          <div class="sig-media">
-            <img loading="lazy" alt="${title}" src="${it.images?.[0] || svgPlaceholder(title)}">
+        </div>
+
+        <div class="aside">
+          <div class="panel">
+            <h3 data-lang="en">Availability</h3>
+            <h3 data-lang="ru">Доступность</h3>
+            <p data-lang="en">Open for clients and full-time roles. Typical turnaround: same day / next day (depending on volume).</p>
+            <p data-lang="ru">Открыт для клиентов и найма. Обычно делаю в тот же день / на следующий (зависит от объёма).</p>
           </div>
-          <div class="sig-meta">
-            <b>${title}</b>
-            <span>${sub}</span>
-            <div class="sig-tags">${(it.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-          </div>`;
-        el.addEventListener("click", ()=>openModal(it.id));
-        el.addEventListener("keydown",(e)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openModal(it.id); }});
-        sigGrid.appendChild(el);
-        safeImg(el.querySelector("img"), title);
-      });
-    }
+          <div class="panel">
+            <h3 data-lang="en">Pricing</h3>
+            <h3 data-lang="ru">Цены</h3>
+            <p data-lang="en"><b>2,000 ₽</b> per premium short (client). Full-time: <b>80,000 ₽</b>/month.</p>
+            <p data-lang="ru"><b>2 000 ₽</b> за хороший short (клиент). Найм: <b>80 000 ₽</b>/мес.</p>
+          </div>
+          <div class="panel">
+            <h3 data-lang="en">What I need from you</h3>
+            <h3 data-lang="ru">Что нужно от вас</h3>
+            <p data-lang="en">Reference clips + brief + deadline. I can propose hook variants and caption style.</p>
+            <p data-lang="ru">Референсы + ТЗ + дедлайн. Могу предложить варианты хука и стиля субтитров.</p>
+          </div>
+        </div>
 
-    // ===========================
-    // Render: filters
-    // ===========================
-    function renderFilters(){
-      const filtersEl = $("#filters");
-      filtersEl.innerHTML = "";
-      CATEGORIES.forEach(c=>{
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "chip" + (currentCat===c.key ? " active" : "");
-        b.textContent = currentLang==="ru" ? c.label.ru : c.label.en;
-        b.addEventListener("click", ()=>{
-          currentCat = c.key;
-          renderFilters();
-          renderWorks();
-        });
-        filtersEl.appendChild(b);
-      });
-    }
+      </div>
+    </div>
+  </section>
 
-    // ===========================
-    // Render: works grid
-    // ===========================
-    function renderWorks(){
-      const gridEl = $("#grid");
-      const items = sortItems(WORKS.filter(matches));
-      gridEl.innerHTML = "";
+  <section id="showreel">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Showreel (temporary)</h2>
+        <h2 data-lang="ru">Шоурил (временно)</h2>
+        <div class="hint" data-lang="en">For now, your first clip is here. When you have a 30s reel, replace the video file.</div>
+        <div class="hint" data-lang="ru">Пока тут первый клип. Когда будет 30-сек шоурил — просто заменишь файл.</div>
+      </div>
 
-      items.forEach(it=>{
-        const title = currentLang==="ru" ? it.title.ru : it.title.en;
-        const sub = currentLang==="ru" ? it.sub.ru : it.sub.en;
+      <div class="video" aria-label="Showreel video">
+        <video src="assets/videos/koktl.mp4" controls playsinline preload="metadata"></video>
+        <div class="overlay">
+          <div class="badge" data-lang="en">Showreel placeholder</div>
+          <div class="badge" data-lang="ru">Заглушка шоурила</div>
+        </div>
+      </div>
+    </div>
+      <!-- Best 3 clips (mobile-first) -->
+      <div class="best3" aria-label="Best clips">
+        <div class="best3-head">
+          <h3 data-lang="en">Best clips</h3>
+          <h3 data-lang="ru">Лучшие клипы</h3>
+          <div class="best3-hint" data-lang="en">Tap to play. Built for retention: hook → pacing → captions.</div>
+          <div class="best3-hint" data-lang="ru">Нажми чтобы проиграть. Удержание: хук → темп → сабы.</div>
+        </div>
 
-        const card = document.createElement("article");
-        card.className = "work" + (it.premium ? " premium" : "");
-        card.tabIndex = 0;
-        card.role = "button";
-        card.innerHTML = `
-          ${it.premium ? `<div class="wbadge">${currentLang==="ru" ? "премиум" : "premium"}</div>` : ``}
+        <div class="best3-grid">
+          <div class="best-card">
+            <div class="best-thumb">
+              <video class="best-video" src="assets/videos/koktl.mp4" playsinline preload="metadata" muted></video>
+              <button class="playbtn" type="button" aria-label="Play">▶</button>
+            </div>
+            <div class="best-meta">
+              <div class="best-title">koktl</div>
+              <div class="best-tags"><span class="tag">Hook</span><span class="tag">Captions</span><span class="tag">Pace</span></div>
+            </div>
+          </div>
+
+          <div class="best-card">
+            <div class="best-thumb">
+              <video class="best-video" src="assets/videos/inst4.mp4" playsinline preload="metadata" muted></video>
+              <button class="playbtn" type="button" aria-label="Play">▶</button>
+            </div>
+            <div class="best-meta">
+              <div class="best-title">inst4</div>
+              <div class="best-tags"><span class="tag">Subtitles</span><span class="tag">Rhythm</span></div>
+            </div>
+          </div>
+
+          <div class="best-card">
+            <div class="best-thumb">
+              <video class="best-video" src="assets/videos/diz.mp4" playsinline preload="metadata" muted></video>
+              <button class="playbtn" type="button" aria-label="Play">▶</button>
+            </div>
+            <div class="best-meta">
+              <div class="best-title">diz</div>
+              <div class="best-tags"><span class="tag">SFX</span><span class="tag">Timing</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="best3-note panel" style="margin-top:12px">
+          <p data-lang="en"><b>Mobile tip:</b> If playback starts muted, tap the speaker in the player controls.</p>
+          <p data-lang="ru"><b>Совет:</b> Если звук не слышно — включи его в контролах плеера.</p>
+        </div>
+      </div>
+
+  </section>
+
+    <section id="works">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Works</h2>
+        <h2 data-lang="ru">Работы</h2>
+        <div class="hint" data-lang="en">Filter by category.</div>
+        <div class="hint" data-lang="ru">Фильтр по категориям.</div>
+      </div>
+
+      <div class="works-filters" aria-label="Works filters">
+        <!-- EN -->
+        <button class="chip wfilter active" type="button" data-wfilter="all" data-lang="en">All</button>
+        <button class="chip wfilter" type="button" data-wfilter="branding" data-lang="en">Branding</button>
+        <button class="chip wfilter" type="button" data-wfilter="channel" data-lang="en">Channel decoration</button>
+        <button class="chip wfilter" type="button" data-wfilter="posters" data-lang="en">Posters</button>
+
+        <!-- RU -->
+        <button class="chip wfilter active" type="button" data-wfilter="all" data-lang="ru">Все</button>
+        <button class="chip wfilter" type="button" data-wfilter="branding" data-lang="ru">Брендинг</button>
+        <button class="chip wfilter" type="button" data-wfilter="channel" data-lang="ru">Оформление канала</button>
+        <button class="chip wfilter" type="button" data-wfilter="posters" data-lang="ru">Постеры</button>
+      </div>
+
+      <div class="works-grid">
+        <!-- Branding / Brand Identity -->
+        <div class="work" data-format="branding">
           <div class="thumb">
-            <img loading="lazy" alt="${title}" src="${it.images?.[0] || svgPlaceholder(title)}">
+            <img loading="lazy" src="assets/works/brand_identity.jpg" alt="Brand identity: logo collection preview">
           </div>
           <div class="meta">
-            <div class="title">${title}</div>
-            <div class="sub">${sub}</div>
-            <div class="tags">${(it.tags||[]).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
-          </div>`;
-        card.addEventListener("click", ()=>openModal(it.id));
-        card.addEventListener("keydown",(e)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openModal(it.id); }});
-        gridEl.appendChild(card);
-        safeImg(card.querySelector("img"), title);
+            <div class="title" data-lang="en">Brand Identity</div>
+            <div class="title" data-lang="ru">Фирменный стиль</div>
+            <div class="tags">
+              <span class="tag">Logos</span>
+              <span class="tag">Grid</span>
+              <span class="tag">System</span>
+            </div>
+            <div class="desc" data-lang="en">Logo collection presented as a clean identity system: consistent spacing, weight, and contrast.</div>
+            <div class="desc" data-lang="ru">Подборка логотипов, оформленная как единая система: единый ритм, вес и контраст.</div>
+          </div>
+        </div>
+
+        <!-- Channel Decoration (2 works) -->
+        <div class="work" data-format="channel">
+          <div class="thumb">
+            <img loading="lazy" src="assets/works/channel_decoration_01.jpg" alt="Channel decoration cover preview">
+          </div>
+          <div class="meta">
+            <div class="title" data-lang="en">Channel Decoration</div>
+            <div class="title" data-lang="ru">Оформление канала</div>
+            <div class="tags">
+              <span class="tag">Cover</span>
+              <span class="tag">Banner</span>
+              <span class="tag">Type</span>
+            </div>
+            <div class="desc" data-lang="en">High-contrast cover with chrome accents and a strong typographic centerpiece for instant recognition.</div>
+            <div class="desc" data-lang="ru">Контрастная обложка с хром-акцентами и сильной типографикой для моментального узнавания.</div>
+          </div>
+        </div>
+
+        <div class="work" data-format="channel">
+          <div class="thumb">
+            <img loading="lazy" src="assets/works/channel_decoration_02.jpg" alt="Channel decoration square layout preview">
+          </div>
+          <div class="meta">
+            <div class="title" data-lang="en">Channel Decoration</div>
+            <div class="title" data-lang="ru">Оформление канала</div>
+            <div class="tags">
+              <span class="tag">Avatar</span>
+              <span class="tag">Square</span>
+              <span class="tag">Pack</span>
+            </div>
+            <div class="desc" data-lang="en">Square variant optimized for avatars and feed thumbnails — same visual system, tighter crop.</div>
+            <div class="desc" data-lang="ru">Квадратная версия под аватар и ленту — тот же визуальный язык, более плотный кроп.</div>
+          </div>
+        </div>
+
+        <!-- Posters -->
+        <div class="work" data-format="posters">
+          <div class="thumb">
+            <img loading="lazy" src="assets/works/poster_01.jpg" alt="Poster layout preview">
+          </div>
+          <div class="meta">
+            <div class="title" data-lang="en">Poster</div>
+            <div class="title" data-lang="ru">Постер</div>
+            <div class="tags">
+              <span class="tag">Layout</span>
+              <span class="tag">Typography</span>
+              <span class="tag">Grid</span>
+            </div>
+            <div class="desc" data-lang="en">Editorial poster with bold hierarchy, angled grid, and modular blocks for fast scanning.</div>
+            <div class="desc" data-lang="ru">Постер в редакционном стиле: крупная иерархия, диагональная сетка и модульные блоки.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Services</h2>
+        <h2 data-lang="ru">Услуги</h2>
+        <div class="hint" data-lang="en">Shorts that feel fast, clean, and watchable.</div>
+        <div class="hint" data-lang="ru">Шортсы, которые смотрятся быстро, чисто и до конца.</div>
+      </div>
+
+      <div class="cards3">
+        <div class="svc">
+          <h3 data-lang="en">Short-form editing</h3>
+          <h3 data-lang="ru">Монтаж коротких видео</h3>
+          <p data-lang="en">TikTok / Reels / Shorts built around hooks and retention.</p>
+          <p data-lang="ru">TikTok / Reels / Shorts с упором на хук и удержание.</p>
+        </div>
+
+        <div class="svc">
+          <h3 data-lang="en">Captions & retention</h3>
+          <h3 data-lang="ru">Субтитры и удержание</h3>
+          <p data-lang="en">Readable subtitles, emphasis, structure — made to keep viewers.</p>
+          <p data-lang="ru">Читаемые субтитры, акценты, структура — чтобы досматривали.</p>
+        </div>
+
+        <div class="svc">
+          <h3 data-lang="en">AI-enhanced workflow</h3>
+          <h3 data-lang="ru">AI-технологии</h3>
+          <p data-lang="en">Speed + quality: cleanup, enhancement, automation.</p>
+          <p data-lang="ru">Скорость + качество: чистка, улучшение, автоматизация.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="pricing">
+        <div class="pricebox">
+          <div class="tabs" aria-label="Pricing tabs">
+            <button class="tab active" id="tabClient" type="button">Client</button>
+            <button class="tab" id="tabHiring" type="button">Hiring</button>
+          </div>
+          <div style="margin-top:14px" id="pricingClient">
+            <div class="big" data-lang="en">2,000 ₽ per premium short</div>
+            <div class="big" data-lang="ru">2 000 ₽ за хороший short</div>
+            <div class="sub" data-lang="en">Final price depends on complexity & volume.</div>
+            <div class="sub" data-lang="ru">Цена зависит от сложности и объёма.</div>
+          </div>
+          <div style="margin-top:14px; display:none" id="pricingHiring">
+            <div class="big" data-lang="en">Full-time: 80,000 ₽ / month</div>
+            <div class="big" data-lang="ru">Найм: 80 000 ₽ / месяц</div>
+            <div class="sub" data-lang="en">Open to roles (short-form + YouTube).</div>
+            <div class="sub" data-lang="ru">Открыт к ролям (shorts + YouTube).</div>
+          </div>
+        </div>
+
+        <div class="pricebox">
+          <div class="big" data-lang="en">Contact</div>
+          <div class="big" data-lang="ru">Контакты</div>
+          <div class="note"><a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Telegram</a> <a class="btn" href="mailto:alex.altukhov.s@gmail.com">Email</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="before-after">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Before / After</h2>
+        <h2 data-lang="ru">До / После</h2>
+        <div class="hint" data-lang="en">Replace placeholders with your “raw vs edited” examples.</div>
+        <div class="hint" data-lang="ru">Заменишь заглушки на примеры “сырьё vs финал”.</div>
+      </div>
+      <div class="ba">
+        <div class="ba-item"><div class="row"><div class="mini">BEFORE (video)</div><div class="mini">AFTER (video)</div></div></div>
+        <div class="ba-item"><div class="row"><div class="mini">BEFORE (video)</div><div class="mini">AFTER (video)</div></div></div>
+        <div class="ba-item"><div class="row"><div class="mini">BEFORE (video)</div><div class="mini">AFTER (video)</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Reviews</h2>
+        <h2 data-lang="ru">Отзывы</h2>
+      </div>
+      <div class="reviews">
+        <div class="review"><div class="img">Screenshot #1</div></div>
+        <div class="review"><div class="img">Screenshot #2</div></div>
+        <div class="review"><div class="img">Screenshot #3</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-lang="en">Contact</h2>
+        <h2 data-lang="ru">Контакты</h2>
+      </div>
+      <div class="card"><div class="card-inner">
+        <a class="btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">Telegram</a>
+        <a class="btn" href="mailto:alex.altukhov.s@gmail.com">Email</a>
+      </div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+      <div>© <span id="year"></span> Alex A</div>
+      <div style="display:flex; gap:10px; align-items:center">
+        <a href="#top">↑ Top</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  
+  <!-- Video modal (desktop preview) -->
+  <div class="vmodal" id="vModal" aria-hidden="true">
+    <div class="vmodal-backdrop" id="vModalBackdrop"></div>
+    <div class="vmodal-inner" role="dialog" aria-label="Video preview">
+      <div class="vmodal-top">
+        <div class="vmodal-title" id="vModalTitle">Preview</div>
+        <button class="btn small" id="vModalClose" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="vmodal-video">
+        <video id="vModalVideo" controls playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile floating CTA -->
+  <div class="float-cta" id="floatCta" aria-label="Quick contact">
+    <a class="float-btn primary" href="https://t.me/tebyaebetdm" target="_blank" rel="noreferrer">
+      <span data-lang="en">Get a test edit</span>
+      <span data-lang="ru">Тестовый монтаж</span>
+    </a>
+    <a class="float-btn" href="#contact">
+      <span data-lang="en">Hire me</span>
+      <span data-lang="ru">Нанять</span>
+    </a>
+  </div>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const btnEN = document.getElementById('btnEN');
+    const btnRU = document.getElementById('btnRU');
+    function setLang(lang){
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.body.classList.toggle('lang-ru', lang === 'ru');
+      btnEN.classList.toggle('active', lang === 'en');
+      btnRU.classList.toggle('active', lang === 'ru');
+      localStorage.setItem('lang', lang);
+    }
+    btnEN.addEventListener('click', () => setLang('en'));
+    btnRU.addEventListener('click', () => setLang('ru'));
+    const saved = localStorage.getItem('lang');
+    if(saved === 'ru' || saved === 'en') setLang(saved);
+
+    const tabClient = document.getElementById('tabClient');
+    const tabHiring = document.getElementById('tabHiring');
+    const pricingClient = document.getElementById('pricingClient');
+    const pricingHiring = document.getElementById('pricingHiring');
+    function setPricing(mode){
+      tabClient.classList.toggle('active', mode === 'client');
+      tabHiring.classList.toggle('active', mode === 'hiring');
+      pricingClient.style.display = mode === 'client' ? 'block' : 'none';
+      pricingHiring.style.display = mode === 'hiring' ? 'block' : 'none';
+    }
+    tabClient.addEventListener('click', () => setPricing('client'));
+    tabHiring.addEventListener('click', () => setPricing('hiring'));
+
+    document.querySelectorAll('.work video').forEach(v => {
+      v.addEventListener('mouseenter', () => { try { v.play(); } catch(e){} });
+      v.addEventListener('mouseleave', () => { try { v.pause(); v.currentTime = 0; } catch(e){} });
+    });
+  
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const menuClose = document.getElementById('menuClose');
+    const drawer = document.getElementById('drawer');
+    function openMenu(){
+      document.body.classList.add('nav-open');
+      drawer?.setAttribute('aria-hidden','false');
+    }
+    function closeMenu(){
+      document.body.classList.remove('nav-open');
+      drawer?.setAttribute('aria-hidden','true');
+    }
+    menuBtn?.addEventListener('click', openMenu);
+    menuClose?.addEventListener('click', closeMenu);
+    drawer?.addEventListener('click', (e)=>{ if(e.target === drawer) closeMenu(); });
+    document.querySelectorAll('.drawer-link').forEach(a=>a.addEventListener('click', closeMenu));
+
+    // Inline video playback (mobile-friendly)
+    function pauseAll(except){
+      document.querySelectorAll('video').forEach(v => {
+        if(v !== except){
+          try{ v.pause(); v.currentTime = 0; }catch(e){}
+          v.closest('.playing')?.classList.remove('playing');
+          if(v.classList.contains('best-video')) v.muted = true;
+          if(v.closest('.work')) v.muted = true;
+        }
       });
-
-      initReveals(true);
     }
+    function bindCardPlayback(card, videoSel){
+      const v = card.querySelector(videoSel);
+      const btn = card.querySelector('.playbtn');
+      if(!v || !btn) return;
 
-    // ===========================
-    // Render: services/awards/reviews/faq
-    // ===========================
-    function renderServices(){
-      const el = $("#servicesGrid");
-      el.innerHTML = "";
-      SERVICES.forEach(s=>{
-        const card = document.createElement("div");
-        card.className = "glass card reveal";
-        card.innerHTML = `<h3>${currentLang==="ru" ? s.title.ru : s.title.en}</h3><p>${currentLang==="ru" ? s.text.ru : s.text.en}</p>`;
-        el.appendChild(card);
-      });
-      initReveals(true);
+      v.muted = true;
+      v.playsInline = true;
+
+      function play(){
+        pauseAll(v);
+        card.classList.add('playing');
+        v.controls = true;
+        v.play().catch(()=>{});
+      }
+      btn.addEventListener('click', (e)=>{ e.preventDefault(); e.stopPropagation(); play(); });
+      card.addEventListener('click', ()=>{ if(v.paused) play(); });
+      v.addEventListener('pause', ()=>{ card.classList.remove('playing'); });
+      v.addEventListener('ended', ()=>{ card.classList.remove('playing'); });
     }
+    document.querySelectorAll('.work[data-src]').forEach(card => bindCardPlayback(card, 'video'));
+    document.querySelectorAll('.best-card').forEach(card => bindCardPlayback(card, 'video'));
 
-    function renderAwards(){
-      const el = $("#awardsGrid");
-      el.innerHTML = "";
-      AWARDS.forEach(a=>{
-        const card = document.createElement("div");
-        card.className = "glass card reveal";
-        card.innerHTML = `<h3>${(currentLang==="ru" ? a.title.ru : a.title.en)} — ${a.year}</h3><p>${currentLang==="ru" ? a.note.ru : a.note.en}</p>`;
-        el.appendChild(card);
-      });
-      initReveals(true);
+    // Floating CTA hide/show (avoid covering contact section)
+    const floatCta = document.getElementById('floatCta');
+    const contactEl = document.getElementById('contact');
+    function updateFloatCta(){
+      if(!floatCta || !contactEl) return;
+      const r = contactEl.getBoundingClientRect();
+      const nearContact = r.top < window.innerHeight * 0.65;
+      floatCta.style.opacity = nearContact ? '0' : '1';
+      floatCta.style.pointerEvents = nearContact ? 'none' : 'auto';
     }
+    window.addEventListener('scroll', updateFloatCta, {passive:true});
+    window.addEventListener('resize', updateFloatCta);
+    updateFloatCta();
 
-    function renderReviews(){
-      const el = $("#reviewsGrid");
-      el.innerHTML = "";
-      REVIEWS.forEach(r=>{
-        const q = document.createElement("blockquote");
-        q.className = "glass card reveal";
-        q.innerHTML = `<h3>${currentLang==="ru" ? "Отзыв" : "Review"}</h3>
-                       <p>“${currentLang==="ru" ? r.text.ru : r.text.en}”</p>
-                       <p style="margin-top:12px;color:var(--muted);font-weight:950;letter-spacing:.12px;text-transform:uppercase;font-size:12px">${currentLang==="ru" ? r.author.ru : r.author.en}</p>`;
-        el.appendChild(q);
-      });
-      initReveals(true);
-    }
+    // Hide CTA when mobile drawer is open
+    const obsBody = new MutationObserver(()=>{
+      if(!floatCta) return;
+      const open = document.body.classList.contains('nav-open');
+      floatCta.style.transform = open ? 'translateY(120%)' : 'translateY(0)';
+    });
+    obsBody.observe(document.body, {attributes:true, attributeFilter:['class']});
 
-    function renderFAQ(){
-      const el = $("#faqGrid");
-      el.innerHTML = "";
-      FAQ.forEach(f=>{
-        const card = document.createElement("div");
-        card.className = "glass card reveal";
-        card.innerHTML = `<h3>${currentLang==="ru" ? f.q.ru : f.q.en}</h3><p>${currentLang==="ru" ? f.a.ru : f.a.en}</p>`;
-        el.appendChild(card);
-      });
-      initReveals(true);
-    }
+    // Mobile header auto-hide on scroll (only on small screens)
+    (function(){
+      const mq = window.matchMedia && window.matchMedia('(max-width: 760px)');
+      if(!mq || !mq.matches) return;
 
-    // ===========================
-    // Logos
-    // ===========================
-    function renderLogos(){
-      const el = $("#logos");
-      el.innerHTML = "";
-      const icon = () => `
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-          <path d="M7 12c0-3 2-5 5-5s5 2 5 5-2 5-5 5-5-2-5-5Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M4.5 12h3M16.5 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M12 4.5v3M12 16.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>`;
-      LOGOS.forEach(name=>{
-        const div = document.createElement("div");
-        div.className = "logo reveal";
-        div.innerHTML = `${icon()} <span>${name}</span>`;
-        el.appendChild(div);
-      });
-      initReveals(true);
-    }
-
-    // ===========================
-    // Modal gallery
-    // ===========================
-    const modal = $("#modal");
-    const modalBackdrop = $("#modalBackdrop");
-    const mClose = $("#mClose");
-    const mTitle = $("#mTitle");
-    const mCat = $("#mCat");
-    const mDesc = $("#mDesc");
-    const mTags = $("#mTags");
-    const mImg = $("#mImg");
-    const mPrev = $("#mPrev");
-    const mNext = $("#mNext");
-    const mThumbs = $("#mThumbs");
-
-    let modalItem = null;
-    let modalIndex = 0;
-
-    function openModal(id){
-      modalItem = WORKS.find(x=>x.id===id);
-      if(!modalItem) return;
-      modalIndex = 0;
-      document.body.classList.add("modal-open");
-      modal.setAttribute("aria-hidden","false");
-      modalBackdrop.setAttribute("aria-hidden","false");
-      renderModal();
-    }
-    function closeModal(){
-      document.body.classList.remove("modal-open");
-      modal.setAttribute("aria-hidden","true");
-      modalBackdrop.setAttribute("aria-hidden","true");
-    }
-    function renderModal(){
-      const it = modalItem;
-      if(!it) return;
-      const title = currentLang==="ru" ? it.title.ru : it.title.en;
-      const desc = currentLang==="ru" ? it.sub.ru : it.sub.en;
-
-      mTitle.textContent = title;
-      mCat.textContent = "• " + catLabel(it.cat);
-      mDesc.textContent = desc;
-
-      mTags.innerHTML = "";
-      (it.tags||[]).forEach(t=>{
-        const s = document.createElement("span");
-        s.className = "tag";
-        s.textContent = t;
-        mTags.appendChild(s);
-      });
-
-      const src = it.images?.[modalIndex];
-      mImg.src = src || svgPlaceholder(title);
-      mImg.alt = title;
-      safeImg(mImg, title);
-
-      mPrev.disabled = modalIndex<=0;
-      mNext.disabled = modalIndex >= (it.images?.length||1) - 1;
-
-      mThumbs.innerHTML = "";
-      const imgs = it.images || [];
-      if(imgs.length > 1){
-        imgs.slice(0,8).forEach((p, idx)=>{
-          const b = document.createElement("button");
-          b.type = "button";
-          const im = document.createElement("img");
-          im.loading = "lazy";
-          im.src = p || svgPlaceholder(title + " " + (idx+1));
-          im.alt = "Thumbnail";
-          safeImg(im, title + " " + (idx+1));
-          b.appendChild(im);
-          b.addEventListener("click", ()=>{
-            modalIndex = idx;
-            renderModal();
-          });
-          mThumbs.appendChild(b);
+      let lastY = window.scrollY || 0;
+      let ticking = false;
+      function onScroll(){
+        if(ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(()=>{
+          const y = window.scrollY || 0;
+          const dy = y - lastY;
+          if(Math.abs(dy) > 8){
+            if(dy > 0 && y > 80){
+              document.body.classList.add('scroll-down');
+              document.body.classList.remove('scroll-up');
+            } else {
+              document.body.classList.add('scroll-up');
+              document.body.classList.remove('scroll-down');
+            }
+            lastY = y;
+          }
+          ticking = false;
         });
       }
-    }
-    function prevImg(){ if(modalItem && modalIndex>0){ modalIndex--; renderModal(); } }
-    function nextImg(){
-      if(!modalItem) return;
-      const max = (modalItem.images?.length||1)-1;
-      if(modalIndex<max){ modalIndex++; renderModal(); }
-    }
-
-    modalBackdrop.addEventListener("click", closeModal);
-    mClose.addEventListener("click", closeModal);
-    mPrev.addEventListener("click", prevImg);
-    mNext.addEventListener("click", nextImg);
-    window.addEventListener("keydown",(e)=>{
-      if(!document.body.classList.contains("modal-open")) return;
-      if(e.key==="Escape") closeModal();
-      if(e.key==="ArrowLeft") prevImg();
-      if(e.key==="ArrowRight") nextImg();
-    });
-
-    // ===========================
-    // Email slide-out + copy
-    // ===========================
-    const emailWrap = $("#emailWrap");
-    $("#emailBtn").addEventListener("click", ()=>{
-      emailWrap.classList.toggle("open");
-      toast(currentLang==="ru" ? I18N.toastOpened.ru : I18N.toastOpened.en);
-    });
-    document.addEventListener("click",(e)=>{
-      if(!emailWrap.contains(e.target)) emailWrap.classList.remove("open");
-    });
-    $("#copyBtn").addEventListener("click", async ()=>{
-      const text = PROFILE.email;
-      try{
-        await navigator.clipboard.writeText(text);
-      }catch{
-        const temp = document.createElement("input");
-        temp.value = text;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand("copy");
-        temp.remove();
-      }
-      toast(currentLang==="ru" ? I18N.toastCopied.ru : I18N.toastCopied.en);
-    });
-
-    // Form UI stub
-    $("#contactForm").addEventListener("submit",(e)=>{
-      e.preventDefault();
-      emailWrap.classList.add("open");
-      toast(currentLang==="ru" ? I18N.toastUseEmail.ru : I18N.toastUseEmail.en);
-    });
-
-    // ===========================
-    // Search & sort
-    // ===========================
-    $("#search").addEventListener("input",(e)=>{
-      currentQuery = (e.target.value || "").trim().toLowerCase();
-      renderWorks();
-    });
-    $("#sort").addEventListener("change",(e)=>{
-      currentSort = e.target.value;
-      renderWorks();
-    });
-
-    // ===========================
-    // Nav spy
-    // ===========================
-    (function navSpy(){
-      const links = $$("[data-nav]");
-      const targets = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-      if(!targets.length) return;
-
-      const io = new IntersectionObserver((entries)=>{
-        const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-        if(!visible) return;
-        const id = "#"+visible.target.id;
-        links.forEach(a=>a.classList.toggle("active", a.getAttribute("href")===id));
-      }, {rootMargin:"-40% 0px -55% 0px", threshold:[0.02, 0.06, 0.12]});
-
-      targets.forEach(t=>io.observe(t));
+      document.body.classList.add('scroll-up');
+      window.addEventListener('scroll', onScroll, {passive:true});
     })();
 
-    // ===========================
-    // Reveal on scroll
-    // ===========================
-    let revealIO;
-    function initReveals(force=false){
-      const els = $$(".reveal:not(.on)");
-      if(!els.length) return;
-      if(!("IntersectionObserver" in window)){
-        els.forEach(e=>e.classList.add("on"));
-        return;
-      }
-      if(!revealIO || force){
-        if(revealIO) revealIO.disconnect();
-        revealIO = new IntersectionObserver((entries, obs)=>{
-          entries.forEach(en=>{
-            if(en.isIntersecting){
-              en.target.classList.add("on");
-              obs.unobserve(en.target);
-            }
-          });
-        }, {rootMargin:"130px"});
-      }
-      els.forEach(el=>revealIO.observe(el));
+    // Desktop modal preview for Works (mobile keeps inline playback)
+    const vModal = document.getElementById('vModal');
+    const vModalVideo = document.getElementById('vModalVideo');
+    const vModalTitle = document.getElementById('vModalTitle');
+    const vModalClose = document.getElementById('vModalClose');
+    const vModalBackdrop = document.getElementById('vModalBackdrop');
+
+    function openModal(src, title){
+      if(!vModal || !vModalVideo) return;
+      document.body.classList.add('vmodal-open');
+      vModal.setAttribute('aria-hidden','false');
+      vModalVideo.src = src;
+      vModalTitle.textContent = title || 'Preview';
+      vModalVideo.play().catch(()=>{});
     }
+    function closeModal(){
+      if(!vModal || !vModalVideo) return;
+      document.body.classList.remove('vmodal-open');
+      vModal.setAttribute('aria-hidden','true');
+      try{ vModalVideo.pause(); vModalVideo.currentTime = 0; }catch(e){}
+      vModalVideo.removeAttribute('src');
+      vModalVideo.load();
+    }
+    vModalClose?.addEventListener('click', closeModal);
+    vModalBackdrop?.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
 
-    // ===========================
-    // Drawer
-    // ===========================
-    function openDrawer(){ document.body.classList.add("drawer-open"); }
-    function closeDrawer(){ document.body.classList.remove("drawer-open"); }
-    $("#burger").addEventListener("click", openDrawer);
-    $("#drawerBackdrop").addEventListener("click", closeDrawer);
-    $("#drawerClose").addEventListener("click", closeDrawer);
-    $$("#drawerLinks a").forEach(a=>a.addEventListener("click", closeDrawer));
-
-    // ===========================
-    // Init
-    // ===========================
-    function applyProfile(){
-      $("#brandName").textContent = PROFILE.name;
-      $("#footName").textContent = PROFILE.name;
-      $("#brandRole").textContent = PROFILE.role_en;
-      $("#brandRoleRU").textContent = PROFILE.role_ru;
-      $("#emailText").textContent = PROFILE.email;
-      $("#tgBtn").href = PROFILE.telegramUrl;
-      $("#kpiYear").textContent = PROFILE.years;
-      $("#kpiBrands").textContent = PROFILE.brands;
-
-      const tools = [
-        {en:"Photoshop (PS)", ru:"Photoshop (PS)"},
-        {en:"Illustrator (AI)", ru:"Illustrator (AI)"},
-        {en:"After Effects (AE)", ru:"After Effects (AE)"},
-        {en:"Figma", ru:"Figma"},
-        {en:"Canva", ru:"Canva"},
-        {en:"AI services (workflow)", ru:"AI‑сервисы (workflow)"},
-      ];
-      const list = $("#toolsList");
-      list.innerHTML = "";
-      tools.forEach(t=>{
-        const div = document.createElement("div");
-        div.className="li";
-        div.innerHTML = `✦ <span data-lang="en">${t.en}</span><span data-lang="ru">${t.ru}</span>`;
-        list.appendChild(div);
+    const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if(!isCoarse){
+      document.querySelectorAll('.work[data-src]').forEach(card => {
+        card.addEventListener('click', (e)=>{
+          if(e.target && e.target.classList && e.target.classList.contains('playbtn')) return;
+          e.preventDefault();
+          const src = card.getAttribute('data-src');
+          const title = card.querySelector('.title')?.textContent || 'Preview';
+          openModal(src, title);
+        });
       });
     }
 
-    function init(){
-      document.documentElement.style.scrollBehavior = "smooth";
-      $("#year").textContent = new Date().getFullYear();
-      applyProfile();
-      renderLogos();
 
-      // placeholders
-      $$("[data-ph-en]").forEach(el=>{
-        el.setAttribute("placeholder", currentLang==="ru" ? el.dataset.phRu : el.dataset.phEn);
-      });
+    // Works category filters
+    (function(){
+      const btns = document.querySelectorAll('.works-filters .wfilter[data-wfilter]');
+      const cards = document.querySelectorAll('.works-grid .work[data-format]');
+      if(!btns.length || !cards.length) return;
 
-      setLang(currentLang);
-      $("#btnEN").addEventListener("click", ()=>setLang("en"));
-      $("#btnRU").addEventListener("click", ()=>setLang("ru"));
+      function setFilter(f){
+        btns.forEach(b => b.classList.toggle('active', b.dataset.wfilter === f));
+        cards.forEach(c => {
+          const show = (f === 'all') || (c.dataset.format === f);
+          c.style.display = show ? '' : 'none';
+        });
+      }
 
-      // default state
-      renderSignature();
-      renderFilters();
-      renderWorks();
-      renderServices();
-      renderAwards();
-      renderReviews();
-      renderFAQ();
-
-      initReveals();
-    }
-    init();
-  </script>
+      btns.forEach(b => b.addEventListener('click', ()=> setFilter(b.dataset.wfilter)));
+      setFilter('all');
+    })();
+</script>
 </body>
 </html>
